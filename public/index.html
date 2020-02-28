@@ -10,15 +10,7 @@
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.9.2/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need
-    <script defer src="/__/firebase/7.9.2/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.9.2/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.9.2/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.9.2/firebase-storage.js"></script>
-      initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script> -->
+    <link rel="icon" href="images/favicon2.png">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="all, index, follow">
     <meta name="revisit-after" content="1 days">
@@ -39,7 +31,8 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Siecha logo</a>
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -66,9 +59,13 @@
   </nav>
 
   <header class="bg-primary text-white">
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="https://firebasestorage.googleapis.com/v0/b/lagos-del-siecha.appspot.com/o/Lagos%20del%20Siecha-B0GgXEwomYE.mp4?alt=media&token=2e5677ec-4835-4710-8649-438a30defd7c" type="video/mp4">
+    </video>
     <div class="container text-center">
       <h1>Lagos del Siecha</h1>
-      <p class="lead">Pesca de trucha, Restaurante, Centro de Convenciones, Bar</p>
+      <p class="lead mb-0">Pesca de trucha, Restaurante, Centro de Convenciones, Bar</p>
     </div>
   </header>
 
@@ -91,7 +88,7 @@
           <ul>
             <li class="lead"><b>Pesca de Trucha arcoiris</b></li>
             <p>Trae tus cañas y todo tu equipo de pesca para trucha, la entrada a los lagos de pesca cuesta $5.000 COP por persona, niños menores de 12 años no pagan.</p>
-            <p>Si no tienes equipo de pesca puedes alquilar una caña por solo $5.000 COP, la carnada para trucha cuesta $7.000 COP y la libra de trucha pescada es a $9.500 COP.</p>
+            <p>Si no tienes equipo de pesca puedes alquilar una caña por solo $5.000 COP, la carnada para trucha cuesta $7.000 COP y la libra de trucha pescada es a $10.000 COP.</p>
             <li class="lead"><b>Restaurante de comida internacional.</b></li>
             <p>Nuestra especialidad son las diferentes preparaciones de trucha, sin embargo tambien tenemos platos vegetarianos, otros con pollo o carne, anímate a reservar y pasar un rato agradable en las montañas de Guasca.</p>
             <a class="navbar-brand js-scroll-trigger" href="restaurante.html"><b>Haz click aqui y reserva en nuestro restaurante.</b></a>
@@ -145,11 +142,15 @@
           <h2>Contáctanos</h2>
           <a href="tel:+573107725161">Haz click aqui para llamarnos</a> o,
           <a href="mailto:lagosdelsiecha@gmail.com">Envíanos un correo aquí,</a> tambien nos puedes
-          <a href="#"> Chatear por WhatsApp</a><br>
+          <a href="https://api.whatsapp.com/send?phone=573107725161&text=Quiero%20ir%20a%20Lagos%20del%20Siecha!"> Chatear por WhatsApp</a><br>
         </div>
       </div>
     </div>
   </section>
+  <div class="map-responsive">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6905.949632845767!2d-73.89072771777283!3d4.797664923863701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8b9e60c90559%3A0xd4d0d6422038eece!2sLagos%20del%20Siecha!5e1!3m2!1ses!2sco!4v1582900734251!5m2!1ses!2sco" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+  </div>
+
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
@@ -168,27 +169,5 @@
 
   <!-- Custom JavaScript for this theme -->
   <script src="js/scrolling-nav.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-      // // The Firebase SDK is initialized and available here!
-      //
-      // firebase.auth().onAuthStateChanged(user => { });
-      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-      // firebase.messaging().requestPermission().then(() => { });
-      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-      //
-      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-      try {
-        let app = firebase.app();
-        let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-        document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-      } catch (e) {
-        console.error(e);
-        document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-      }
-    });
-  </script>
   </body>
 </html>
