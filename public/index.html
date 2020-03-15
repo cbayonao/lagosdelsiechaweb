@@ -28,44 +28,51 @@
     <meta name="description" content="">
   </head>
   <body id="page-top">
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="images/logo.png" alt="">
+      <a class="navbar-brand" href="#page-top">
+        <img src="images/logo.png" alt="logo-siecha">
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <li class="nav-item my_nav_class">
             <a class="nav-link js-scroll-trigger" href="#about">Nosotros</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item my_nav_class">
             <a class="nav-link js-scroll-trigger" href="#services">Nuestras actividades</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item my_nav_class">
             <a class="nav-link js-scroll-trigger" href="#matrimonios">Matrimonios</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item my_nav_class">
             <a class="nav-link js-scroll-trigger" href="#event_social">Eventos sociales</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item my_nav_class">
             <a class="nav-link js-scroll-trigger" href="#contact">Contáctanos</a>
+          </li>
+          <li class="nav-item my_nav_class">
+            <a class="nav-link js-scroll-trigger" href="#map">Mapa</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="bg-primary text-white">
-    <div class="overlay"></div>
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="https://firebasestorage.googleapis.com/v0/b/lagos-del-siecha.appspot.com/o/Lagos%20del%20Siecha-B0GgXEwomYE.mp4?alt=media&token=2e5677ec-4835-4710-8649-438a30defd7c" type="video/mp4">
-    </video>
-    <div class="container text-center">
+  <header>
+    <div class="lead text-center text-white padding_exclusive">
       <h1>Lagos del Siecha</h1>
-      <p class="lead mb-0">Pesca de trucha, Restaurante, Centro de Convenciones, Bar</p>
+      <h5>Centro de Convenciones</h5>
+      <h5>Club de pesca - Restaurante - Bar</h5>
+    </div>
+    <div class="overlay">
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="https://firebasestorage.googleapis.com/v0/b/lagos-del-siecha.appspot.com/o/Lagos%20del%20Siecha-B0GgXEwomYE.mp4?alt=media&token=2e5677ec-4835-4710-8649-438a30defd7c" type="video/mp4">
+      </video>
     </div>
   </header>
 
@@ -74,7 +81,7 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Acerca de Nosotros</h2>
-          <p class="lead">A solo <b>una hora</b> de bogotá, entre las <b>montañas de Guasca, Cundinamarca</b> se encuentra el club de pesca - restaurante y centro de convenciones,<b> Lagos del Siecha</b>, contamos con más de <b>30 años</b> de experiencias inolvidables.</p>
+          <p class="justify-content-start">A solo <b>una hora</b> de bogotá, entre las <b>montañas de Guasca, Cundinamarca</b> se encuentra el club de pesca - restaurante y centro de convenciones,<b> Lagos del Siecha</b>, contamos con más de <b>30 años</b> de experiencia brindando momentos inolvidables.</p>
         </div>
       </div>
     </div>
@@ -85,55 +92,58 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Nuestras Actividades</h2>
-          <ul>
-            <li class="lead"><b>Pesca de Trucha arcoiris</b></li>
+          <div class="container row">
+            <h5 class="justify-content-start"><b>Pesca de Trucha arcoiris</b></h5>
             <p>Trae tus cañas y todo tu equipo de pesca para trucha, la entrada a los lagos de pesca cuesta $5.000 COP por persona, niños menores de 12 años no pagan.</p>
-            <p>Si no tienes equipo de pesca puedes alquilar una caña por solo $5.000 COP, la carnada para trucha cuesta $7.000 COP y la libra de trucha pescada es a $10.000 COP.</p>
-            <li class="lead"><b>Restaurante de comida internacional.</b></li>
+            <p>Si no tienes equipo de pesca puedes alquilar una caña por solo $4.000 COP, la carnada para trucha cuesta $7.000 COP y la libra de trucha pescada es a $10.000 COP.</p>
+          </div>
+          <div class="container row">
+            <h5 class="justify-content-start"><b>Restaurante de comida internacional.</b></h5>
             <p>Nuestra especialidad son las diferentes preparaciones de trucha, sin embargo tambien tenemos platos vegetarianos, otros con pollo o carne, anímate a reservar y pasar un rato agradable en las montañas de Guasca.</p>
-            <a class="navbar-brand js-scroll-trigger" href="restaurante.html"><b>Haz click aqui y reserva en nuestro restaurante.</b></a>
-            <li class="lead"><b>Camping y caminatas al aire libre</b></li>
+            <button class="btn-primary" onclick="window.location.href = 'https://www.lagosdelsiecha.com/reserva.html';" ><b>Haz click aqui y reserva en nuestro restaurante.</b></button>
+          </div>
+          <div class="container row">
+            <h5 class="justify-content-start"><b>Camping y caminatas al aire libre</b></h5>
             <p>Trae tus cañas y todo tu equipo de pesca para trucha, la entrada a los lagos de pesca cuesta $5.000 COP por persona, niños menores de 12 años no pagan</p>
-          </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
   <!-- Matrimonio -->
   <section id="matrimonios">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Matrimonios</h2>
-          <p class="lead">Celebra con nosotros tu matrimonio, te ayudamos a planear la boda de principio a fin.</p>
-          <p class="">Solo preocúpate por pasarla bien</p>
-          <ul>
-            <li class="lead">Planeación de la decoración.</li>
-            <li class="lead">Arreglos de flores.</li>
-            <li class="lead">Salón de eventos para 200 personas</li>
-            <li class="lead">Comida internacional tipo buffet</li>
-          </ul>
-          <a class="navbar-brand js-scroll-trigger" href="#"><b>Quiero mas información.</b></a>
+          <h4 class="initialism">Celebra con nosotros tu matrimonio, te ayudamos a planear la boda de principio a fin.</h4>
+          <p class="lead">Solo preocúpate por pasarla bien</p>
+            <p class="justify-content-start">Planeación de la decoración.</p>
+            <p class="justify-content-start">Arreglos de flores.</p>
+            <p class="justify-content-start">Salón de eventos para 200 personas</p>
+            <p class="justify-content-start">Comida internacional tipo buffet</p>
+          <button class="btn-primary" href="#"><b>Quiero mas información.</b></button>
         </div>
       </div>
     </div>
   </section>
+
   <!-- Eventos Sociales -->
   <section id="event_social" class="bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Eventos Sociales</h2>
-          <ul>
-            <li class="lead">Eventos empresariales</li>
-              <p>Organizamos su evento social.</p>
-            <li class="lead">Fechas especiales</li>
-              <p>Celebra tus fechas importantes con nosotros y sólo preocupate por pasarla bien.</p>
-          </ul>
+            <p class="justify-content-start">Eventos empresariales</p>
+            <p>Organizamos su evento social.</p>
+            <p class="justify-content-start">Fechas especiales</p>
+            <p>Celebra tus fechas importantes con nosotros y sólo preocupate por pasarla bien.</p>
         </div>
       </div>
     </div>
   </section>
+
   <!-- Contacto -->
   <section id="contact">
     <div class="container">
@@ -147,12 +157,18 @@
       </div>
     </div>
   </section>
-  <div class="map-responsive">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6905.949632845767!2d-73.89072771777283!3d4.797664923863701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8b9e60c90559%3A0xd4d0d6422038eece!2sLagos%20del%20Siecha!5e1!3m2!1ses!2sco!4v1582900734251!5m2!1ses!2sco" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+  <!-- Mapa -->
+  <section id="map">
+  <div class="container-fluid">
+    <div class="map-responsive">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6905.949632845767!2d-73.89072771777283!3d4.797664923863701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8b9e60c90559%3A0xd4d0d6422038eece!2sLagos%20del%20Siecha!5e1!3m2!1ses!2sco!4v1582900734251!5m2!1ses!2sco" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
   </div>
+  </section>
 
-
-  <!-- Footer -->
+  <!-- Footer
+  Incluir Horario y entre semana llamadas al 3107725161 -->
   <footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Lagos del Siecha S.A.S. 2020</p>

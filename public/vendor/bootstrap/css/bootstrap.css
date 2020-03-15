@@ -90,13 +90,16 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
 }
 
 p {
     margin-top: 0;
     margin-bottom: 1rem;
+    text-align: justify;
 }
+
+h1 .text-center .text-white {}
 
 abbr[title],
 abbr[data-original-title] {
@@ -120,6 +123,7 @@ ul,
 dl {
     margin-top: 0;
     margin-bottom: 1rem;
+    list-style-type: none;
 }
 
 ol ol,
@@ -424,8 +428,7 @@ h6,
 
 .lead {
     font-size: 1.25rem;
-    font-weight: 300;
-    text-justify: auto;
+    text-align: center;
 }
 
 .display-1 {
@@ -2563,12 +2566,14 @@ fieldset:disabled a.btn {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
+    border-radius: 4px;
 }
 
 .btn-primary:hover {
     color: #fff;
     background-color: #0069d9;
     border-color: #0062cc;
+    border-radius: 4px;
 }
 
 .btn-primary:focus,
@@ -2601,6 +2606,7 @@ fieldset:disabled a.btn {
     color: #fff;
     background-color: #6c757d;
     border-color: #6c757d;
+    border-radius: 4px;
 }
 
 .btn-secondary:hover {
@@ -2639,6 +2645,7 @@ fieldset:disabled a.btn {
     color: #fff;
     background-color: #28a745;
     border-color: #28a745;
+    border-radius: 4px;
 }
 
 .btn-success:hover {
@@ -2677,6 +2684,7 @@ fieldset:disabled a.btn {
     color: #fff;
     background-color: #17a2b8;
     border-color: #17a2b8;
+    border-radius: 4px;
 }
 
 .btn-info:hover {
@@ -2715,6 +2723,7 @@ fieldset:disabled a.btn {
     color: #212529;
     background-color: #ffc107;
     border-color: #ffc107;
+    border-radius: 4px;
 }
 
 .btn-warning:hover {
@@ -2753,6 +2762,7 @@ fieldset:disabled a.btn {
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545;
+    border-radius: 4px;
 }
 
 .btn-danger:hover {
@@ -2791,6 +2801,7 @@ fieldset:disabled a.btn {
     color: #212529;
     background-color: #f8f9fa;
     border-color: #f8f9fa;
+    border-radius: 4px;
 }
 
 .btn-light:hover {
@@ -2829,6 +2840,7 @@ fieldset:disabled a.btn {
     color: #fff;
     background-color: #343a40;
     border-color: #343a40;
+    border-radius: 4px;
 }
 
 .btn-dark:hover {
@@ -4302,6 +4314,10 @@ input[type="button"].btn-block {
     margin-bottom: -1px;
 }
 
+.my_nav_class {
+    display: flex;
+}
+
 .nav-tabs .nav-link {
     border: 1px solid transparent;
     border-top-left-radius: 0.25rem;
@@ -4365,7 +4381,7 @@ input[type="button"].btn-block {
 }
 
 .navbar {
-    position: relative;
+    position: absolute;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -4396,7 +4412,7 @@ input[type="button"].btn-block {
     margin-right: 1rem;
     font-size: 1.25rem;
     line-height: inherit;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .navbar-brand:hover,
@@ -4445,7 +4461,7 @@ input[type="button"].btn-block {
     line-height: 1;
     background-color: transparent;
     border: 1px solid transparent;
-    border-radius: 0.25rem;
+    border-radius: 4px;
 }
 
 .navbar-toggler:hover,
@@ -6872,7 +6888,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-    background-color: #343a40 !important;
+    background-color: #343a40e5 !important;
 }
 
 a.bg-dark:hover,
