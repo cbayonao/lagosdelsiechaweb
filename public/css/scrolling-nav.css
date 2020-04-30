@@ -9,7 +9,7 @@ header {
 }
 
 section {
-    padding: 70px 0;
+    padding: 40px 0;
 }
 
 header {
@@ -97,4 +97,8 @@ header .overlay {
     padding-right: 100px;
     padding-top: 80px;
     /* padding-bottom: 0px; */
+}
+
+.margin-topX {
+    margin-top: 87px;
 }
