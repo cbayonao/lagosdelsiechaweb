@@ -1,6 +1,6 @@
 <div class="main-div">
   <mat-card>
-    <mat-card class="example-card">
+    <mat-card class="cards">
       <mat-card-header>
         <mat-card-title class="titulo">Restaurante - Bar</mat-card-title>
         <mat-card-subtitle>Lagos del Siecha</mat-card-subtitle>
@@ -19,7 +19,7 @@
         </p>
       </mat-card-content>
     </mat-card>
-    <mat-card class="carta displaynone">
+    <mat-card class="carta cards">
       <mat-card-title class="titulo">Conoce nuestra carta</mat-card-title>
       <mat-card-content>
         <mat-accordion class="example-headers-align">
@@ -33,45 +33,53 @@
                 <b>Truchas</b>
               </mat-panel-title>
               <mat-panel-description>
-                Las mejores preparaciones con trucha de la casa.
-                <mat-icon>set_meal</mat-icon>
               </mat-panel-description>
+              <mat-icon>set_meal</mat-icon>
             </mat-expansion-panel-header>
             <div class="conjunto">
               <mat-panel-title>
                 <p>Trucha al Ajillo</p>
               </mat-panel-title>
               <mat-panel-description>
-                Description
-                <p>$50.000</p>
+                Con el poder saludable del ajo.
               </mat-panel-description>
-            </div>
-            <div class="conjunto">
-              <mat-panel-title>
-                <p>Trucha a la marinera</p>
-              </mat-panel-title>
-              <mat-panel-description>
-                Description
-                <p>$50.000</p>
-              </mat-panel-description>
-            </div>
-            <div class="conjunto">
-              <mat-panel-title>
-                <p>Trucha a la mandarina</p>
-              </mat-panel-title>
-              <mat-panel-description>
-                Description
-                <p>$50.000</p>
-              </mat-panel-description>
+              <p>$29.000</p>
             </div>
             <div class="conjunto">
               <mat-panel-title>
                 <p>Trucha a la griega</p>
               </mat-panel-title>
               <mat-panel-description>
-                Description
-                <p>$50.000</p>
+                Gratinada en dos quesos con aceitunas verdes tomate y cebolla.
               </mat-panel-description>
+              <p>$39.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Trucha florentina</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Terminada al horno rellena de puré de espinacas y salsa de queso.
+              </mat-panel-description>
+              <p>$36.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Trucha en salsa de champiñones</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Con el toque del cheff que le da un delicioso aroma.
+              </mat-panel-description>
+              <p>$35.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Trucha Roquefort</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Bañada en salsa de queso azul.
+              </mat-panel-description>
+              <p>$33.000</p>
             </div>
             <mat-action-row>
               <button mat-stroked-button color="primary" (click)="nextStep()">
@@ -90,27 +98,26 @@
                 <b>Carnes</b>
               </mat-panel-title>
               <mat-panel-description>
-                Excelentes platos con Carne de res o cerdo.
-                <mat-icon>restaurant</mat-icon>
               </mat-panel-description>
+              <mat-icon>restaurant</mat-icon>
             </mat-expansion-panel-header>
             <div class="conjunto">
               <mat-panel-title>
-                <p>Churrasco</p>
+                <p>Costillas BBQ</p>
               </mat-panel-title>
               <mat-panel-description>
-                Description
-                <p>$50.000</p>
+                Deliciosas costillas bañadas en salsa BBQ.
               </mat-panel-description>
+              <p>$34.000</p>
             </div>
             <div class="conjunto">
               <mat-panel-title>
                 <p>Baby beef</p>
               </mat-panel-title>
               <mat-panel-description>
-                Description
-                <p>$50.000</p>
+                Fino lomo de res a la plancha
               </mat-panel-description>
+              <p>$38.000</p>
             </div>
 
             <mat-action-row>
@@ -133,28 +140,18 @@
                 <b>Pollos</b>
               </mat-panel-title>
               <mat-panel-description>
-                Deliciosas preparaciones con pechuga de pollo.
-                <mat-icon>food_bank</mat-icon>
               </mat-panel-description>
+              <mat-icon>food_bank</mat-icon>
             </mat-expansion-panel-header>
 
             <div class="conjunto">
               <mat-panel-title>
-                <p>Pollo Aflomeriza</p>
+                <p>Pollos lagos del siecha</p>
               </mat-panel-title>
               <mat-panel-description>
-                Description
-                <p>$50.000</p>
+                Gratinado con champiñones frescos.
               </mat-panel-description>
-            </div>
-            <div class="conjunto">
-              <mat-panel-title>
-                <p>Pechuga a la plancha</p>
-              </mat-panel-title>
-              <mat-panel-description>
-                Description
-                <p>$50.000</p>
-              </mat-panel-description>
+              <p>$38.000</p>
             </div>
 
             <mat-action-row>
@@ -176,9 +173,8 @@
                 <b>Vegetarianos</b>
               </mat-panel-title>
               <mat-panel-description>
-                Las mejores preparaciones con ingredientes del campo.
-                <mat-icon>grass</mat-icon>
               </mat-panel-description>
+              <mat-icon>grass</mat-icon>
             </mat-expansion-panel-header>
 
             <div class="conjunto">
@@ -186,18 +182,9 @@
                 <p>Pasta al pesto</p>
               </mat-panel-title>
               <mat-panel-description>
-                Description
-                <p>$50.000</p>
+                Con salsa pesto y champiñones de la región.
               </mat-panel-description>
-            </div>
-            <div class="conjunto">
-              <mat-panel-title>
-                <p>Ensalada Cesar</p>
-              </mat-panel-title>
-              <mat-panel-description>
-                Description
-                <p>$50.000</p>
-              </mat-panel-description>
+              <p>$25.000</p>
             </div>
 
             <mat-action-row>
@@ -219,9 +206,8 @@
                 <b>Postres</b>
               </mat-panel-title>
               <mat-panel-description>
-                Postres del campo tradicionales del "El Siecha"
-                <mat-icon>local_dining</mat-icon>
               </mat-panel-description>
+              <mat-icon>local_dining</mat-icon>
             </mat-expansion-panel-header>
 
             <div class="conjunto">
@@ -229,20 +215,28 @@
                 <p>Matrimonio</p>
               </mat-panel-title>
               <mat-panel-description>
-                Description
-                <p>$50.000</p>
+                Combinacion de dulce del dia con arequipe y queso al gratín.
               </mat-panel-description>
+              <p>$15.000</p>
             </div>
             <div class="conjunto">
               <mat-panel-title>
                 <p>Gratinado</p>
               </mat-panel-title>
               <mat-panel-description>
-                Description
-                <p>$50.000</p>
+                Con queso y arequipe
               </mat-panel-description>
+              <p>$13.000</p>
             </div>
-
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Cuajada con melao</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Oficialmente del campo
+              </mat-panel-description>
+              <p>$13.000</p>
+            </div>
             <mat-action-row>
               <button mat-stroked-button color="warn" (click)="prevStep()">
                 Anterior
@@ -262,19 +256,35 @@
                 <b>Bebidas</b>
               </mat-panel-title>
               <mat-panel-description>
-                Bebidas frias y calientes para que alegres tu dia!
-                <mat-icon>wine_bar</mat-icon>
               </mat-panel-description>
+              <mat-icon>wine_bar</mat-icon>
             </mat-expansion-panel-header>
-
             <div class="conjunto">
               <mat-panel-title>
-                <p>Botella de vino</p>
+                <p>Limonada de coco</p>
               </mat-panel-title>
               <mat-panel-description>
-                Description
-                <p>$50.000</p>
+                Deliciosa limonada de coco el perfecto acompañante.
               </mat-panel-description>
+              <p>$7.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Limonada de yerbabuena</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Limonada con el toque de la yerbabuena o menta.
+              </mat-panel-description>
+              <p>$7.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Limonada natural</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Deliciosa limonada natural.
+              </mat-panel-description>
+              <p>$4.000</p>
             </div>
             <div class="conjunto">
               <mat-panel-title>
@@ -282,16 +292,7 @@
               </mat-panel-title>
               <mat-panel-description>
                 Description
-                <p>$5.000</p>
-              </mat-panel-description>
-            </div>
-            <div class="conjunto">
-              <mat-panel-title>
-                <p>Cerveza nacional 330 ml.</p>
-              </mat-panel-title>
-              <mat-panel-description>
-                Description
-                <p>$5.000</p>
+                <p>$4.000</p>
               </mat-panel-description>
             </div>
 
@@ -436,13 +437,16 @@
     <mat-card>
       <mat-card-header>
         <mat-card-title class="titulo"
-          >Dando cumplimiento al prótocolo aprobado para la atención de nuestros
-          clientes, todas las personas que nos visiten deberán completar el
-          siguiente formulario haciendo click en el siguiente
-          botón</mat-card-title
+          >Reservas</mat-card-title
         >
       </mat-card-header>
       <mat-card-content>
+        <p>
+          Dando cumplimiento al prótocolo aprobado para la atención de nuestros
+          clientes, todas las personas que nos visiten deberán completar el
+          siguiente formulario haciendo click en el siguiente
+          botón
+        </p>
         <mat-card-actions>
           <a
             [routerLink]="['/protocolo-form']"
@@ -450,7 +454,7 @@
             mat-raised-button
             color="primary"
             class="protocoloButton"
-            >Formulario para atención a clientes</a
+            >Formulario para reservas</a
           >
         </mat-card-actions>
       </mat-card-content>

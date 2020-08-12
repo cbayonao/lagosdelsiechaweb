@@ -9,6 +9,11 @@
   margin-bottom: 1em;
 }
 
+.cards {
+  margin: 1em 0 1em 0;
+  padding: 1em 0 1em 0;
+}
+
 .subtitulo {
   display: flex;
   justify-content: center;
@@ -38,11 +43,15 @@ table {
     justify-content: center;
     flex-direction: column;
   }
+  mat-card {
+    padding: 0;
+  }
 }
 
 mat-card-content {
   margin: 1em;
   padding: 1em;
+  text-align: justify;
 }
 
 mat-form-field {

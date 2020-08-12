@@ -43,7 +43,7 @@ table {
 mat-card-content {
   margin: 1em;
   padding: 1em;
-  width: 90%;
+  text-align: justify;
 }
 
 mat-form-field {
@@ -60,7 +60,7 @@ mat-card-actions {
 }
 
 button {
-  width: 60%;
+  width: 100%;
   height: 40px;
 }
 
@@ -71,7 +71,7 @@ button {
 .whatsappButton {
   background: linear-gradient(45deg, #25d366 30%, #075e54 90%);
   box-shadow: 0 3px 5px 2px rgba(33, 203, 243, 0.3);
-  width: 50%;
+  width: 100%;
   height: 48;
   padding: 0 30px;
 }
@@ -79,7 +79,7 @@ button {
 .telButton {
   background: linear-gradient(45deg, #2531d3 30%, #07105e 90%);
   box-shadow: 0 3px 5px 2px rgba(33, 117, 243, 0.3);
-  width: 50%;
+  width: 100%;
   height: 48;
   padding: 0 30px;
 }
@@ -87,7 +87,7 @@ button {
 .mailButton {
   background: linear-gradient(45deg, #25d3c4 30%, #0a7a7e 90%);
   box-shadow: 0 3px 5px 2px rgba(33, 194, 243, 0.3);
-  width: 50%;
+  width: 100%;
   height: 48;
   padding: 0 30px;
 }

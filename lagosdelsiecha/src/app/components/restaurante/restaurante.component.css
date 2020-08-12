@@ -28,16 +28,21 @@ mat-card {
   margin-bottom: 1.5em;
 }
 
-/* mat-card-title,
+mat-card-title,
 mat-card-subtitle {
   display: flex;
   justify-content: center;
-} */
+}
 
 mat-card-content {
   margin: 1em;
   padding: 1em;
-  width: 90%;
+  text-align: justify;
+}
+
+.cards {
+  margin: 1em 0 1em 0;
+  padding: 1em 0 1em 0;
 }
 
 .form {
@@ -62,6 +67,9 @@ button {
     justify-content: center;
     flex-direction: column;
   }
+  mat-card {
+    padding: 0;
+  }
 }
 
 .select {
@@ -70,7 +78,8 @@ button {
 
 .conjunto {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding-bottom: 1em;
 }
 
 .carta {

@@ -2,6 +2,11 @@
   font-size: 20px;
 }
 
+.cards {
+  margin: 1em 0 1em 0;
+  padding: 1em 0 1em 0;
+}
+
 .titulo {
   font-size: 25px;
   display: flex;
@@ -38,12 +43,15 @@ table {
     justify-content: center;
     flex-direction: column;
   }
+  mat-card {
+    padding: 0;
+  }
 }
 
 mat-card-content {
   margin: 1em;
   padding: 1em;
-  width: 90%;
+  text-align: justify;
 }
 
 mat-form-field {
