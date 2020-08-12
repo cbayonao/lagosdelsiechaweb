@@ -35,6 +35,8 @@ import { MatListModule } from '@angular/material/list';
 import { FooterComponent } from './components/appComponents/footer/footer.component';
 import { MainCarouselComponent } from './components/appComponents/main-carousel/main-carousel.component';
 import { FormProtocoloComponent } from './components/form-protocolo/form-protocolo.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -72,6 +74,7 @@ import { FormProtocoloComponent } from './components/form-protocolo/form-protoco
     MatNativeDateModule,
     MatExpansionModule,
     NgbModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent],
