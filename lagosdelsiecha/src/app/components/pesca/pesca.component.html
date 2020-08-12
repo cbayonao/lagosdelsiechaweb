@@ -1,0 +1,207 @@
+<div class="main-div">
+  <mat-card>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title class="titulo">Pesca de trucha</mat-card-title>
+        <mat-card-subtitle class="subtitulo"
+          >Lagos del Siecha</mat-card-subtitle
+        >
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="https://firebasestorage.googleapis.com/v0/b/lagos-del-siecha.appspot.com/o/lagosDelSiecha23.jpg?alt=media&token=fcfab794-7c5d-4d85-b8fe-4dc932e9798e"
+        alt="Pesca Lagos del Siecha"
+      />
+      <mat-card-content>
+        <p class="leyenda">
+          Pesca de trucha arcoiris en nuestros lagos de pesca, puedes traer tus
+          implementos de pesca como: cañas de pescar, señuelos de pesca
+          artificiales y carnadas no vivas; tambien puedes alquilar una caña
+          artesanal batastante completa y comprar la carnada de la casa, esto
+          seria mas que suficiente.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="titulo"
+          >Precios para realizar la actividad de pesca</mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <!-- Dia Column -->
+          <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef>Descripción</th>
+            <td mat-cell *matCellDef="let element">
+              {{ element.description }}
+            </td>
+          </ng-container>
+          <!-- Desde Column -->
+          <ng-container matColumnDef="precio">
+            <th mat-header-cell *matHeaderCellDef>Precio</th>
+            <td mat-cell *matCellDef="let element">{{ element.precio }}</td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="displaynone">
+      <mat-card-header>
+        <mat-card-title class="titulo"
+          >Rellena este formulario para que te podamos atender</mat-card-title
+        >
+        <mat-card-subtitle>
+          Como medida de protección, de acuerdo con nuestro protocolo durante la
+          contingencia del COVID 19 tendremos un cupo máximo de atención al
+          público por día, lo mejor que puedes hacer es reservar tu cupo para
+          que te atendamos el día que lo desees.
+        </mat-card-subtitle>
+        <mat-card-title
+          >Formulario para atención en los lagos de pesca</mat-card-title
+        >
+      </mat-card-header>
+      <form method="get">
+        <div class="form">
+          <mat-card-content>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Ingresa tu nombre" value="" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Apellidos</mat-label>
+                <input matInput placeholder="Ingresa tus apellidos" value="" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ title }}</mat-label>
+                <mat-select>
+                  <mat-option
+                    *ngFor="let tipoid of tipoids"
+                    [value]="tipoid.value"
+                  >
+                    {{ tipoid.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Numero de ID.</mat-label>
+                <input
+                  matInput
+                  placeholder="Ingresa tu número de identificación"
+                  value=""
+                />
+              </mat-form-field>
+            </p>
+          </mat-card-content>
+          <mat-card-content>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Correo electronico</mat-label>
+                <input
+                  matInput
+                  placeholder="Ingresa tu correo electronico"
+                  value=""
+                />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Numero telefónico</mat-label>
+                <input
+                  matInput
+                  placeholder="Ingresa tu numero de telefono"
+                  value=""
+                />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Fecha de tu reserva</mat-label>
+                <input matInput [matDatepicker]="picker" />
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                  <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Hora</mat-label>
+                <input
+                  matInput
+                  type="time"
+                  id="horaReserva"
+                  name="horaReserva"
+                  value=""
+                  min="06:00"
+                  max="16:00"
+                />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Con cuantas personas nos visitas?</mat-label>
+                <input matInput placeholder="Numero de personas" value="" />
+              </mat-form-field>
+            </p>
+          </mat-card-content>
+        </div>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Reservar</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="titulo"
+          >Dando cumplimiento al prótocolo aprobado para la atención de nuestros
+          clientes, todas las personas que nos visiten deberán completar el
+          siguiente formulario haciendo click en el siguiente
+          botón</mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-actions>
+          <a
+            [routerLink]="['/protocolo-form']"
+            routerLinkActive="router-link-active"
+            mat-raised-button
+            color="primary"
+            class="protocoloButton"
+            >Formulario para atención a clientes</a
+          >
+        </mat-card-actions>
+      </mat-card-content>
+    </mat-card>
+  </mat-card>
+  <mat-card class="displaynone">
+    <mat-card-header>
+      <mat-card-title class="titulo"
+        >Escribenos por WhatsApp para que te podamos atender</mat-card-title
+      >
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card-actions>
+        <a
+          href="https://wa.me/573107725161?text=Quiero%20hacer%20una%20reserva%20para%20pescar"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          class="whatsappButton"
+          mat-raised-button
+          color="primary"
+        >
+          Escribenos un WhatsApp
+        </a>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+</div>
+<app-footer></app-footer>

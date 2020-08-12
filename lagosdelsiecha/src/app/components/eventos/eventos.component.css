@@ -1,0 +1,76 @@
+.leyenda {
+  font-size: 20px;
+}
+
+.titulo {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.subtitulo {
+  display: flex;
+  justify-content: center;
+}
+mat-card-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+mat-card {
+  margin-bottom: 1.5em;
+}
+
+table {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+mat-card-content {
+  margin: 1em;
+  padding: 1em;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-card {
+  margin-bottom: 1.5em;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 60%;
+  height: 40px;
+}
+
+.displaynone {
+  display: none;
+}
+
+.whatsappButton {
+  background: linear-gradient(45deg, #25d366 30%, #075e54 90%);
+  box-shadow: 0 3px 5px 2px rgba(33, 203, 243, 0.3);
+  width: 80%;
+  height: 48;
+  padding: 0 30px;
+}

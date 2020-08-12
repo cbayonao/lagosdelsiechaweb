@@ -1,0 +1,481 @@
+<div class="main-div">
+  <mat-card>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title class="titulo">Restaurante - Bar</mat-card-title>
+        <mat-card-subtitle>Lagos del Siecha</mat-card-subtitle>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="https://firebasestorage.googleapis.com/v0/b/lagos-del-siecha.appspot.com/o/WhatsApp%20Image%202020-07-01%20at%205.47.48%20PM.jpeg?alt=media&token=b199a94f-9499-478f-908b-b70961d88b76"
+        alt="Restaurante Lagos del Siecha"
+      />
+      <mat-card-content>
+        <p class="leyenda">
+          Deliciosos platos, nuestra especialidad es la trucha, pero puedes
+          disfrutar de platos con carne, pollo y preparaciones vegetarianas en
+          las montanas de Guasca, Cundinamarca y unos paisajes inolvidables,
+          oxigenate y pasa un rato agradable con los que mas quieres.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="carta displaynone">
+      <mat-card-title class="titulo">Conoce nuestra carta</mat-card-title>
+      <mat-card-content>
+        <mat-accordion class="example-headers-align">
+          <mat-expansion-panel
+            [expanded]="step === 0"
+            (opened)="setStep(0)"
+            hideToggle
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Truchas</b>
+              </mat-panel-title>
+              <mat-panel-description>
+                Las mejores preparaciones con trucha de la casa.
+                <mat-icon>set_meal</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Trucha al Ajillo</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$50.000</p>
+              </mat-panel-description>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Trucha a la marinera</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$50.000</p>
+              </mat-panel-description>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Trucha a la mandarina</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$50.000</p>
+              </mat-panel-description>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Trucha a la griega</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$50.000</p>
+              </mat-panel-description>
+            </div>
+            <mat-action-row>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel
+            [expanded]="step === 1"
+            (opened)="setStep(1)"
+            hideToggle
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Carnes</b>
+              </mat-panel-title>
+              <mat-panel-description>
+                Excelentes platos con Carne de res o cerdo.
+                <mat-icon>restaurant</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Churrasco</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$50.000</p>
+              </mat-panel-description>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Baby beef</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$50.000</p>
+              </mat-panel-description>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel
+            [expanded]="step === 2"
+            (opened)="setStep(2)"
+            hideToggle
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Pollos</b>
+              </mat-panel-title>
+              <mat-panel-description>
+                Deliciosas preparaciones con pechuga de pollo.
+                <mat-icon>food_bank</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Pollo Aflomeriza</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$50.000</p>
+              </mat-panel-description>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Pechuga a la plancha</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$50.000</p>
+              </mat-panel-description>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [expanded]="step === 3"
+            (opened)="setStep(3)"
+            hideToggle
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Vegetarianos</b>
+              </mat-panel-title>
+              <mat-panel-description>
+                Las mejores preparaciones con ingredientes del campo.
+                <mat-icon>grass</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Pasta al pesto</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$50.000</p>
+              </mat-panel-description>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Ensalada Cesar</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$50.000</p>
+              </mat-panel-description>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [expanded]="step === 4"
+            (opened)="setStep(4)"
+            hideToggle
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Postres</b>
+              </mat-panel-title>
+              <mat-panel-description>
+                Postres del campo tradicionales del "El Siecha"
+                <mat-icon>local_dining</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Matrimonio</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$50.000</p>
+              </mat-panel-description>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Gratinado</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$50.000</p>
+              </mat-panel-description>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            [expanded]="step === 5"
+            (opened)="setStep(5)"
+            hideToggle
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Bebidas</b>
+              </mat-panel-title>
+              <mat-panel-description>
+                Bebidas frias y calientes para que alegres tu dia!
+                <mat-icon>wine_bar</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Botella de vino</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$50.000</p>
+              </mat-panel-description>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Gaseosa en vaso 330 ml.</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$5.000</p>
+              </mat-panel-description>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Cerveza nacional 330 ml.</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Description
+                <p>$5.000</p>
+              </mat-panel-description>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Finalizar
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="displaynone">
+      <mat-card-title class="titulo">Reserva tu mesa</mat-card-title>
+      <mat-card-subtitle class="subtitulo"
+        >Completa este formulario para realizar tu reserva y disfrutar de un dia
+        inolvidable</mat-card-subtitle
+      >
+      <form method="get">
+        <div class="form">
+          <mat-card-content>
+            <mat-card-title class="titulo">Datos personales</mat-card-title>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Ingresa tu nombre" value="" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Apellidos</mat-label>
+                <input matInput placeholder="Ingresa tus apellidos" value="" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ title }}</mat-label>
+                <mat-select>
+                  <mat-option
+                    *ngFor="let tipoid of tipoids"
+                    [value]="tipoid.value"
+                  >
+                    {{ tipoid.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Numero de ID.</mat-label>
+                <input
+                  matInput
+                  placeholder="Ingresa tu número de identificación"
+                  value=""
+                />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Correo electronico</mat-label>
+                <input
+                  matInput
+                  placeholder="Ingresa tu correo electronico"
+                  value=""
+                />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Numero telefónico</mat-label>
+                <input
+                  matInput
+                  placeholder="Ingresa tu numero de telefono"
+                  value=""
+                />
+              </mat-form-field>
+            </p>
+          </mat-card-content>
+          <mat-card-content>
+            <mat-card-title class="titulo"
+              >Detalles de tu reserva</mat-card-title
+            >
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Fecha de tu reserva</mat-label>
+                <input matInput [matDatepicker]="picker" />
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                  <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Hora</mat-label>
+                <input
+                  matInput
+                  type="time"
+                  id="horaReserva"
+                  name="horaReserva"
+                  value=""
+                  min="06:00"
+                  max="20:00"
+                />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Para cuantas personas vas a reservar?</mat-label>
+                <input matInput placeholder="Numero de personas" value="" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Elije las preparaciones que deseas</mat-label>
+                <mat-select multiple>
+                  <mat-option
+                    *ngFor="let preparation of preparationList"
+                    [value]="preparation.value"
+                  >
+                    {{ preparation.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="select">
+                <mat-label>Ingresa los detalles de tu pedido</mat-label>
+                <textarea matInput placeholder="Detalles del pedido"></textarea>
+              </mat-form-field>
+            </p>
+          </mat-card-content>
+        </div>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Reservar</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="titulo"
+          >Dando cumplimiento al prótocolo aprobado para la atención de nuestros
+          clientes, todas las personas que nos visiten deberán completar el
+          siguiente formulario haciendo click en el siguiente
+          botón</mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-actions>
+          <a
+            [routerLink]="['/protocolo-form']"
+            routerLinkActive="router-link-active"
+            mat-raised-button
+            color="primary"
+            class="protocoloButton"
+            >Formulario para atención a clientes</a
+          >
+        </mat-card-actions>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="displaynone">
+      <mat-card-header>
+        <mat-card-title class="titulo"
+          >Quieres hablar con nosotros?</mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-actions>
+          <a
+            href="https://wa.me/573107725161?text=Quiero%20hacer%20una%20reserva%20para%20pescar"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            class="whatsappButton"
+            mat-raised-button
+            color="primary"
+          >
+            Escribenos un WhatsApp
+          </a>
+        </mat-card-actions>
+      </mat-card-content>
+    </mat-card>
+  </mat-card>
+</div>
+<app-footer></app-footer>

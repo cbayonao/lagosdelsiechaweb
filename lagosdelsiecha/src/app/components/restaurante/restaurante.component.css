@@ -1,0 +1,119 @@
+mat-card-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.leyenda {
+  font-size: 20px;
+}
+
+.titulo {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.subtitulo {
+  display: flex;
+  justify-content: center;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-card {
+  margin-bottom: 1.5em;
+}
+
+/* mat-card-title,
+mat-card-subtitle {
+  display: flex;
+  justify-content: center;
+} */
+
+mat-card-content {
+  margin: 1em;
+  padding: 1em;
+  width: 90%;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 60%;
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.select {
+  height: 200px;
+}
+
+.conjunto {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.conjunto {
+  display: flex;
+  flex-direction: row;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.displaynone {
+  display: none;
+}
+
+.whatsappButton {
+  background: linear-gradient(45deg, #25d366 30%, #075e54 90%);
+  box-shadow: 0 3px 5px 2px rgba(33, 203, 243, 0.3);
+  width: 80%;
+  height: 48;
+  padding: 0 30px;
+}
+
+.protocoloButton {
+  background: linear-gradient(45deg, #2531d3 30%, #07105e 90%);
+  box-shadow: 0 3px 5px 2px rgba(33, 117, 243, 0.3);
+  width: 80%;
+  height: 48;
+  padding: 0 30px;
+}

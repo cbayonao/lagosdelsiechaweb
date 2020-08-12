@@ -1,0 +1,40 @@
+mat-card-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.cards {
+  margin-top: 2em;
+}
+
+mat-card-content {
+  margin-top: 2em;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 60%;
+  height: 40px;
+  padding-bottom: 1em;
+}
+
+.leyenda {
+  font-size: 20px;
+}
+
+.titulo {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.subtitulo {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
