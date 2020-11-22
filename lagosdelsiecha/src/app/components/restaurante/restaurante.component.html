@@ -30,12 +30,68 @@
           >
             <mat-expansion-panel-header>
               <mat-panel-title>
-                <b>Truchas</b>
+                <b>Entradas</b>
               </mat-panel-title>
-              <mat-panel-description>
-              </mat-panel-description>
+              <mat-panel-description> </mat-panel-description>
               <mat-icon>set_meal</mat-icon>
             </mat-expansion-panel-header>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Tomates mozarella</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Frescos tomates gratinados en queso mozarella a las finas
+                hierbas.
+              </mat-panel-description>
+              <p>$19.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Champiñones al Ajillo</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Frescos champiñones gratinados con el mágico toque del ajo.
+              </mat-panel-description>
+              <p>$19.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Crema de champiñones</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Exquisitos champiñones del campo para su paladar.
+              </mat-panel-description>
+              <p>$16.000</p>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel
+            [expanded]="step === 1"
+            (opened)="setStep(1)"
+            hideToggle
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Truchas</b>
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+              <mat-icon>set_meal</mat-icon>
+            </mat-expansion-panel-header>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Trucha a la Marinera</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Deliciosa trucha bañada en salsa de frescos mariscos
+              </mat-panel-description>
+              <p>$45.000</p>
+            </div>
             <div class="conjunto">
               <mat-panel-title>
                 <p>Trucha al Ajillo</p>
@@ -59,7 +115,8 @@
                 <p>Trucha florentina</p>
               </mat-panel-title>
               <mat-panel-description>
-                Terminada al horno rellena de puré de espinacas y salsa de queso.
+                Terminada al horno rellena de puré de espinacas y salsa de
+                queso.
               </mat-panel-description>
               <p>$36.000</p>
             </div>
@@ -89,21 +146,29 @@
           </mat-expansion-panel>
 
           <mat-expansion-panel
-            [expanded]="step === 1"
-            (opened)="setStep(1)"
+            [expanded]="step === 2"
+            (opened)="setStep(2)"
             hideToggle
           >
             <mat-expansion-panel-header>
               <mat-panel-title>
                 <b>Carnes</b>
               </mat-panel-title>
-              <mat-panel-description>
-              </mat-panel-description>
+              <mat-panel-description> </mat-panel-description>
               <mat-icon>restaurant</mat-icon>
             </mat-expansion-panel-header>
             <div class="conjunto">
               <mat-panel-title>
-                <p>Costillas BBQ</p>
+                <p>Churrasco</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Chatas a la plancha con delicioso chimichurri
+              </mat-panel-description>
+              <p>$32.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Costillas BBQ (Agotado)</p>
               </mat-panel-title>
               <mat-panel-description>
                 Deliciosas costillas bañadas en salsa BBQ.
@@ -131,16 +196,15 @@
           </mat-expansion-panel>
 
           <mat-expansion-panel
-            [expanded]="step === 2"
-            (opened)="setStep(2)"
+            [expanded]="step === 3"
+            (opened)="setStep(3)"
             hideToggle
           >
             <mat-expansion-panel-header>
               <mat-panel-title>
                 <b>Pollos</b>
               </mat-panel-title>
-              <mat-panel-description>
-              </mat-panel-description>
+              <mat-panel-description> </mat-panel-description>
               <mat-icon>food_bank</mat-icon>
             </mat-expansion-panel-header>
 
@@ -154,6 +218,16 @@
               <p>$38.000</p>
             </div>
 
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Pechuga a la plancha</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                Deliciosa pechuga de pollo a la plancha
+              </mat-panel-description>
+              <p>$29.000</p>
+            </div>
+
             <mat-action-row>
               <button mat-stroked-button color="warn" (click)="prevStep()">
                 Anterior
@@ -164,16 +238,15 @@
             </mat-action-row>
           </mat-expansion-panel>
           <mat-expansion-panel
-            [expanded]="step === 3"
-            (opened)="setStep(3)"
+            [expanded]="step === 4"
+            (opened)="setStep(4)"
             hideToggle
           >
             <mat-expansion-panel-header>
               <mat-panel-title>
                 <b>Vegetarianos</b>
               </mat-panel-title>
-              <mat-panel-description>
-              </mat-panel-description>
+              <mat-panel-description> </mat-panel-description>
               <mat-icon>grass</mat-icon>
             </mat-expansion-panel-header>
 
@@ -197,16 +270,15 @@
             </mat-action-row>
           </mat-expansion-panel>
           <mat-expansion-panel
-            [expanded]="step === 4"
-            (opened)="setStep(4)"
+            [expanded]="step === 5"
+            (opened)="setStep(5)"
             hideToggle
           >
             <mat-expansion-panel-header>
               <mat-panel-title>
                 <b>Postres</b>
               </mat-panel-title>
-              <mat-panel-description>
-              </mat-panel-description>
+              <mat-panel-description> </mat-panel-description>
               <mat-icon>local_dining</mat-icon>
             </mat-expansion-panel-header>
 
@@ -247,16 +319,15 @@
             </mat-action-row>
           </mat-expansion-panel>
           <mat-expansion-panel
-            [expanded]="step === 5"
-            (opened)="setStep(5)"
+            [expanded]="step === 6"
+            (opened)="setStep(6)"
             hideToggle
           >
             <mat-expansion-panel-header>
               <mat-panel-title>
                 <b>Bebidas</b>
               </mat-panel-title>
-              <mat-panel-description>
-              </mat-panel-description>
+              <mat-panel-description> </mat-panel-description>
               <mat-icon>wine_bar</mat-icon>
             </mat-expansion-panel-header>
             <div class="conjunto">
@@ -290,10 +361,19 @@
               <mat-panel-title>
                 <p>Gaseosa en vaso 330 ml.</p>
               </mat-panel-title>
-              <mat-panel-description>
-                Description
-                <p>$4.000</p>
-              </mat-panel-description>
+              <mat-panel-description>Bebida gaseosa</mat-panel-description>
+              <p>$4.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <p>Jugos Naturales</p>
+              </mat-panel-title>
+              <mat-panel-description
+                >Deliciosos jugos con fruta fresca del
+                campo</mat-panel-description
+              >
+              <p>$6.500</p>
             </div>
 
             <mat-action-row>
@@ -436,16 +516,13 @@
     </mat-card>
     <mat-card>
       <mat-card-header>
-        <mat-card-title class="titulo"
-          >Reservas</mat-card-title
-        >
+        <mat-card-title class="titulo">Reservas</mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
           Dando cumplimiento al prótocolo aprobado para la atención de nuestros
           clientes, todas las personas que nos visiten deberán completar el
-          siguiente formulario haciendo click en el siguiente
-          botón
+          siguiente formulario haciendo click en el siguiente botón
         </p>
         <mat-card-actions>
           <a

@@ -29,6 +29,7 @@ export class RestauranteComponent implements OnInit {
     { value: 'PosMatr', viewValue: 'Postre Matrimonio' },
     { value: 'PosGra', viewValue: 'Postre gratinado' },
   ];
+
   tipoids: TipoID[] = [
     { value: 'CC', viewValue: 'Cedula de ciudadanía' },
     { value: 'CE', viewValue: 'Cedula de extranjería' },
