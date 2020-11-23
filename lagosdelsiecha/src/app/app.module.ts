@@ -14,7 +14,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 // Module routing
 import { AppRoutingModule } from './app-routing.module';
 // Components
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { RestauranteComponent } from './components/restaurante/restaurante.component';
 import { PescaComponent } from './components/pesca/pesca.component';
@@ -38,6 +37,7 @@ import { MainCarouselComponent } from './components/appComponents/main-carousel/
 import { FormProtocoloComponent } from './components/form-protocolo/form-protocolo.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { PreparacionComponent } from './components/preparacion/preparacion.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +55,7 @@ import { environment } from '../environments/environment';
     FooterComponent,
     MainCarouselComponent,
     FormProtocoloComponent,
+    PreparacionComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +76,6 @@ import { environment } from '../environments/environment';
     MatDatepickerModule,
     MatNativeDateModule,
     MatExpansionModule,
-    NgbModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),

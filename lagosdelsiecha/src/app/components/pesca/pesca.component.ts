@@ -11,7 +11,7 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { description: 'Entrada a los lagos de pesca', precio: '$10.000' },
+  { description: 'Entrada a los lagos de pesca', precio: '$5.000' },
   { description: 'Alquiler de caña artesanal', precio: '$5.000' },
   { description: 'Carnada de la casa', precio: '$7.000' },
   { description: 'Libra de trucha', precio: '$10.000' },
