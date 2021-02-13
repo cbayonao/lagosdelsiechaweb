@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { FormProtocoloComponent } from './form-protocolo.component';
 
@@ -6,7 +6,7 @@ describe('FormProtocoloComponent', () => {
   let component: FormProtocoloComponent;
   let fixture: ComponentFixture<FormProtocoloComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ FormProtocoloComponent ]
     })
