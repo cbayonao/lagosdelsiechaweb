@@ -1,0 +1,50 @@
+mat-card-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.cards {
+  margin: 1em 0 1em 0;
+  padding: 1em 0 1em 0;
+}
+
+mat-card-content {
+  margin: 1em;
+  padding: 1em;
+  text-align: justify;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+button {
+  width: 60%;
+  height: 40px;
+  padding-bottom: 1em;
+}
+
+.leyenda {
+  font-size: 20px;
+}
+
+.titulo {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.subtitulo {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  mat-card {
+    padding: 0;
+  }
+}

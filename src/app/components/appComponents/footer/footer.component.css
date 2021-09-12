@@ -1,0 +1,31 @@
+footer {
+  background: #3f51b5;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  padding-top: 30px;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.footer .built {
+  display: flex;
+  justify-content: center;
+  line-height: 50px;
+}
+
+a {
+  color: #c5ccff;
+  text-decoration: wavy;
+}
+a:hover,
+a:active {
+  border: 1px solid #3f51b5;
+  color: #020624;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+}

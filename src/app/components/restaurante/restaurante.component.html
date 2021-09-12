@@ -1,0 +1,800 @@
+<div class="main-div">
+  <mat-card>
+    <mat-card class="cards">
+      <mat-card-header>
+        <mat-card-title class="titulo">Restaurante - Bar</mat-card-title>
+        <mat-card-subtitle>Lagos del Siecha</mat-card-subtitle>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="../../../assets/images/Tchampinones.jpeg"
+        alt="Restaurante Lagos del Siecha"
+      />
+      <mat-card-content>
+        <p class="leyenda">
+          Deliciosos platos, nuestra especialidad es la trucha, pero puedes
+          disfrutar de platos con carne, pollo y preparaciones vegetarianas en
+          las montanas de Guasca, Cundinamarca y unos paisajes inolvidables,
+          oxigenate y pasa un rato agradable con los que mas quieres.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="carta cards">
+      <mat-card-title class="titulo">Conoce nuestra carta</mat-card-title>
+      <mat-card-content>
+        <mat-accordion class="example-headers-align">
+          <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Desayunos</b>
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+              <!-- <mat-icon>set_meal</mat-icon> -->
+            </mat-expansion-panel-header>
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Desayuno continental </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"> </mat-panel-description>
+              <p>$15.000</p>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Entradas</b>
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+              <!-- <mat-icon>set_meal</mat-icon> -->
+            </mat-expansion-panel-header>
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Tomates mozarella </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Frescos tomates gratinados en queso mozarella a las finas
+                hierbas.
+              </mat-panel-description>
+              <p>$19.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Champiñones al Ajillo </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Frescos champiñones gratinados con el mágico toque del ajo.
+              </mat-panel-description>
+              <p>$19.000</p>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Cremas</b>
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+              <!-- <mat-icon>set_meal</mat-icon> -->
+            </mat-expansion-panel-header>
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Crema de champiñones </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Deliciosa trucha bañada en salsa de frescos mariscos
+              </mat-panel-description>
+              <p>$16.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Crema siecha </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Deliciosa trucha bañada en salsa de frescos mariscos
+              </mat-panel-description>
+              <p>$18.000</p>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Truchas</b>
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+              <!-- <mat-icon>food_bank</mat-icon> -->
+            </mat-expansion-panel-header>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Trucha al Ajillo </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Con el poder saludable del ajo.
+              </mat-panel-description>
+              <p>$29.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> En salsa de champiñón </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Con el toque del cheff que le da un delicioso aroma.
+              </mat-panel-description>
+              <p>$35.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Trucha a la Marinera </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Deliciosa trucha bañada en salsa de frescos mariscos
+              </mat-panel-description>
+              <p>$45.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Trucha a la griega </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Gratinada en dos quesos con aceitunas verdes tomate y cebolla.
+              </mat-panel-description>
+              <p>$39.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Trucha florentina </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Terminada al horno rellena de puré de espinacas y salsa de
+                queso.
+              </mat-panel-description>
+              <p>$36.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Trucha Roquefort </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Bañada en salsa de queso azul.
+              </mat-panel-description>
+              <p>$33.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Trucha crocante al pesto </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Deliciosa pechuga de pollo a la plancha
+              </mat-panel-description>
+              <p>$33.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Cazuela de mariscos </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Deliciosa pechuga de pollo a la plancha
+              </mat-panel-description>
+              <p>$39.000</p>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Carnes</b>
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Churrasco </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Con salsa pesto y champiñones de la región.
+              </mat-panel-description>
+              <p>$32.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Baby beef </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Con salsa pesto y champiñones de la región.
+              </mat-panel-description>
+              <p>$38.000</p>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="step === 5" (opened)="setStep(5)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Pollos</b>
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+              <!-- <mat-icon>restaurant</mat-icon> -->
+            </mat-expansion-panel-header>
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Pechuga a la plancha</a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Chatas a la plancha con delicioso chimichurri
+              </mat-panel-description>
+              <p>$38.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Pechuga lagos del siecha </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Fino lomo de res a la plancha
+              </mat-panel-description>
+              <p>$38.000</p>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="step === 6" (opened)="setStep(6)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Pastas</b>
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+              <!-- <mat-icon>local_dining</mat-icon> -->
+            </mat-expansion-panel-header>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Pasta Carbonara </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Combinacion de dulce del dia con arequipe y queso al gratín.
+              </mat-panel-description>
+              <p>$27.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Pasta al pesto </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Con queso y arequipe
+              </mat-panel-description>
+              <p>$25.000</p>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="step === 7" (opened)="setStep(7)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Menú infantil</b>
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+              <!-- <mat-icon>wine_bar</mat-icon> -->
+            </mat-expansion-panel-header>
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Menú infantil </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Deliciosos jugos con fruta fresca del campo
+              </mat-panel-description>
+              <p>$17.000</p>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="step === 8" (opened)="setStep(8)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Bebidas frias</b>
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+              <!-- <mat-icon>wine_bar</mat-icon> -->
+            </mat-expansion-panel-header>
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Limonada de coco </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Deliciosa limonada de coco el perfecto acompañante.
+              </mat-panel-description>
+              <p>$7.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Limonada de yerbabuena </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Limonada con el toque de la yerbabuena o menta.
+              </mat-panel-description>
+              <p>$7.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Limonada cerezada </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Limonada con el toque de la yerbabuena o menta.
+              </mat-panel-description>
+              <p>$7.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Limonada natural </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Deliciosa limonada natural.
+              </mat-panel-description>
+              <p>$4.000</p>
+            </div>
+            <div class="conjunto">
+              <mat-panel-title>
+                <a
+                  mat-button
+                  [routerLink]="['#']"
+                  routerLinkActive="router-link-active"
+                  color="primary"
+                >
+                  Gaseosa en vaso 330 ml.
+                </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Bebida gaseosa</mat-panel-description
+              >
+              <p>$4.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Jugos naturales </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Deliciosos jugos con fruta fresca del campo
+              </mat-panel-description>
+              <p>$7.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Cerveza Poker </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Deliciosos jugos con fruta fresca del campo
+              </mat-panel-description>
+              <p>$5.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Cerveza Club Colombia </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Deliciosos jugos con fruta fresca del campo
+              </mat-panel-description>
+              <p>$7.000</p>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="step === 9" (opened)="setStep(9)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Bebidas calientes</b>
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+              <!-- <mat-icon>wine_bar</mat-icon> -->
+            </mat-expansion-panel-header>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Chocolate o Café </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Deliciosos jugos con fruta fresca del campo
+              </mat-panel-description>
+              <p>$4.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Aguadepanela </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Deliciosos jugos con fruta fresca del campo
+              </mat-panel-description>
+              <p>$3.300</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Tinto o aromática </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Deliciosos jugos con fruta fresca del campo
+              </mat-panel-description>
+              <p>$2.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Carajillo </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Deliciosos jugos con fruta fresca del campo
+              </mat-panel-description>
+              <p>$7.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Canelazo </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Deliciosos jugos con fruta fresca del campo
+              </mat-panel-description>
+              <p>$7.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Vino caliente </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Deliciosos jugos con fruta fresca del campo
+              </mat-panel-description>
+              <p>$14.000</p>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Siguiente
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="step === 10" (opened)="setStep(10)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <b>Postres</b>
+              </mat-panel-title>
+              <mat-panel-description> </mat-panel-description>
+              <!-- <mat-icon>wine_bar</mat-icon> -->
+            </mat-expansion-panel-header>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Matrimonio </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Deliciosos jugos con fruta fresca del campo
+              </mat-panel-description>
+              <p>$15.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Cuajada con melao o arequipe </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Deliciosos jugos con fruta fresca del campo
+              </mat-panel-description>
+              <p>$15.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Gratinado </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Deliciosos jugos con fruta fresca del campo
+              </mat-panel-description>
+              <p>$13.000</p>
+            </div>
+
+            <mat-action-row>
+              <button mat-stroked-button color="warn" (click)="prevStep()">
+                Anterior
+              </button>
+              <button mat-stroked-button color="primary" (click)="nextStep()">
+                Finalizar
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="displaynone">
+      <mat-card-title class="titulo">Reserva tu mesa</mat-card-title>
+      <mat-card-subtitle class="subtitulo"
+        >Completa este formulario para realizar tu reserva y disfrutar de un dia
+        inolvidable
+      </mat-card-subtitle>
+      <form method="get">
+        <div class="form">
+          <mat-card-content>
+            <mat-card-title class="titulo">Datos personales</mat-card-title>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Ingresa tu nombre" value="" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Apellidos</mat-label>
+                <input matInput placeholder="Ingresa tus apellidos" value="" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ title }}</mat-label>
+                <mat-select>
+                  <mat-option
+                    *ngFor="let tipoid of tipoids"
+                    [value]="tipoid.value"
+                  >
+                    {{ tipoid.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Numero de ID.</mat-label>
+                <input
+                  matInput
+                  placeholder="Ingresa tu número de identificación"
+                  value=""
+                />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Correo electronico</mat-label>
+                <input
+                  matInput
+                  placeholder="Ingresa tu correo electronico"
+                  value=""
+                />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Numero telefónico</mat-label>
+                <input
+                  matInput
+                  placeholder="Ingresa tu numero de telefono"
+                  value=""
+                />
+              </mat-form-field>
+            </p>
+          </mat-card-content>
+          <mat-card-content>
+            <mat-card-title class="titulo"
+              >Detalles de tu reserva</mat-card-title
+            >
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Fecha de tu reserva</mat-label>
+                <input matInput [matDatepicker]="picker" />
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                  <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Hora</mat-label>
+                <input
+                  matInput
+                  type="time"
+                  id="horaReserva"
+                  name="horaReserva"
+                  value=""
+                  min="06:00"
+                  max="20:00"
+                />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Para cuantas personas vas a reservar?</mat-label>
+                <input matInput placeholder="Numero de personas" value="" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Elije las preparaciones que deseas</mat-label>
+                <mat-select multiple>
+                  <mat-option
+                    *ngFor="let preparation of preparationList"
+                    [value]="preparation.value"
+                  >
+                    {{ preparation.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="select">
+                <mat-label>Ingresa los detalles de tu pedido</mat-label>
+                <textarea matInput placeholder="Detalles del pedido"></textarea>
+              </mat-form-field>
+            </p>
+          </mat-card-content>
+        </div>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Reservar</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="titulo"
+          >Horarios de atención - Restaurante</mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <h2>
+          Los estaremos atendiendo todos los Sabados, Domingos y festivos del
+          año, desde las 8:00 AM, hasta las 6:30 PM si quieres que te atendamos
+          en otra fecha, por favor comunicarte, en los canales disponibles en la
+          pestaña de "Contáctanos"
+        </h2>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="cards">
+      <mat-card-header>
+        <mat-card-title class="titulo"
+          >¡Atención! Manejamos todos los medios de pago por
+          internet</mat-card-title
+        >
+        <mat-card-subtitle class="subtitulo"
+          >Lagos del Siecha</mat-card-subtitle
+        >
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="../../../assets/images/mediosdepago.png"
+        alt="lagos_del_siecha"
+      />
+      <mat-card-content>
+        <p class="leyenda">
+          No tenemos datafono, pero puedes realizar tu pago por medio de un
+          enlace de pago que enviamos a tu telefono o email, contamos con
+          internet para que puedas hacer el pago, pero debes tener paciencia ya
+          que la velocidad no es la mejor, pide un tinto mientras esperas,
+          recuerda que este servicio es administrado y gestionado por PAY U
+          COLOMBIA.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <app-form-protocolo></app-form-protocolo>
+
+    <mat-card id="reservas" class="displaynone">
+      <mat-card-header>
+        <mat-card-title class="titulo">Reservas</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Dando click en el siguiente botón encontrarás el formulario de
+          reservas,
+        </p>
+        <mat-card-actions>
+          <a
+            [routerLink]="['/protocolo-form']"
+            routerLinkActive="router-link-active"
+            mat-raised-button
+            color="primary"
+            class="protocoloButton"
+            >Formulario para reservas</a
+          >
+        </mat-card-actions>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="displaynone">
+      <mat-card-header>
+        <mat-card-title class="titulo"
+          >Quieres hablar con nosotros?</mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-actions>
+          <a
+            href="https://wa.me/573107725161?text=Quiero%20hacer%20una%20reserva%20para%20pescar"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            class="whatsappButton"
+            mat-raised-button
+            color="primary"
+          >
+            Escribenos un WhatsApp
+          </a>
+        </mat-card-actions>
+      </mat-card-content>
+    </mat-card>
+  </mat-card>
+</div>
+<app-footer></app-footer>
