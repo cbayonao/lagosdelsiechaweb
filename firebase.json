@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/lagosdelsiecha",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
