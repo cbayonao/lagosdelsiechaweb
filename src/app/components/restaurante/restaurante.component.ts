@@ -39,7 +39,7 @@ export class RestauranteComponent implements OnInit {
   ];
   public title: string;
   panelOpenState = false;
-
+  currentYear = new Date().getFullYear();
   step = 0;
 
   setStep(index: number) {

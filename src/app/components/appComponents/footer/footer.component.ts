@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
   public myFooter: string;
 
+  currentYear = new Date().getFullYear();
+
   constructor() {
-    this.myFooter = 'Copyright © Lagos del Siecha S.A.S. 2020';
+    this.myFooter = `Copyright © Lagos del Siecha S.A.S. ${this.currentYear}`;
   }
 
   ngOnInit(): void {}

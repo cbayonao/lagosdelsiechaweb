@@ -20,7 +20,8 @@
       </mat-card-content>
     </mat-card>
     <mat-card class="carta cards">
-      <mat-card-title class="titulo">Conoce nuestra carta</mat-card-title>
+      <mat-card-title class="titulo">Conoce nuestra carta para el año {{currentYear}}</mat-card-title>
+      <mat-card-subtitle class="titulo">Nuestros precios incluyen impuesto al consumo</mat-card-subtitle>
       <mat-card-content>
         <mat-accordion class="example-headers-align">
           <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
@@ -36,7 +37,7 @@
                 <a mat-button color="primary"> Desayuno continental </a>
               </mat-panel-title>
               <mat-panel-description *ngIf="false"> </mat-panel-description>
-              <p>$15.000</p>
+              <p>$17.000</p>
             </div>
 
             <mat-action-row>
@@ -61,7 +62,7 @@
                 Frescos tomates gratinados en queso mozarella a las finas
                 hierbas.
               </mat-panel-description>
-              <p>$19.000</p>
+              <p>$21.000</p>
             </div>
             <div class="conjunto">
               <mat-panel-title>
@@ -70,7 +71,7 @@
               <mat-panel-description *ngIf="false">
                 Frescos champiñones gratinados con el mágico toque del ajo.
               </mat-panel-description>
-              <p>$19.000</p>
+              <p>$21.000</p>
             </div>
 
             <mat-action-row>
@@ -97,7 +98,7 @@
               <mat-panel-description *ngIf="false">
                 Deliciosa trucha bañada en salsa de frescos mariscos
               </mat-panel-description>
-              <p>$16.000</p>
+              <p>$21.000</p>
             </div>
 
             <div class="conjunto">
@@ -107,7 +108,7 @@
               <mat-panel-description *ngIf="false">
                 Deliciosa trucha bañada en salsa de frescos mariscos
               </mat-panel-description>
-              <p>$18.000</p>
+              <p>$20.000</p>
             </div>
 
             <mat-action-row>
@@ -135,7 +136,7 @@
               <mat-panel-description *ngIf="false">
                 Con el poder saludable del ajo.
               </mat-panel-description>
-              <p>$29.000</p>
+              <p>$33.000</p>
             </div>
 
             <div class="conjunto">
@@ -145,7 +146,7 @@
               <mat-panel-description *ngIf="false">
                 Con el toque del cheff que le da un delicioso aroma.
               </mat-panel-description>
-              <p>$35.000</p>
+              <p>$37.000</p>
             </div>
 
             <div class="conjunto">
@@ -155,28 +156,38 @@
               <mat-panel-description *ngIf="false">
                 Deliciosa trucha bañada en salsa de frescos mariscos
               </mat-panel-description>
-              <p>$45.000</p>
+              <p>$56.000</p>
             </div>
 
             <div class="conjunto">
               <mat-panel-title>
-                <a mat-button color="primary"> Trucha a la griega </a>
+                <a mat-button color="primary"> Trucha al Curry con Camarones </a>
               </mat-panel-title>
               <mat-panel-description *ngIf="false">
                 Gratinada en dos quesos con aceitunas verdes tomate y cebolla.
               </mat-panel-description>
-              <p>$39.000</p>
+              <p>$52.000</p>
             </div>
 
             <div class="conjunto">
               <mat-panel-title>
-                <a mat-button color="primary"> Trucha florentina </a>
+                <a mat-button color="primary"> Trucha a la Griega </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false">
+                Gratinada en dos quesos con aceitunas verdes tomate y cebolla.
+              </mat-panel-description>
+              <p>$42.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Trucha Florentina </a>
               </mat-panel-title>
               <mat-panel-description *ngIf="false">
                 Terminada al horno rellena de puré de espinacas y salsa de
                 queso.
               </mat-panel-description>
-              <p>$36.000</p>
+              <p>$38.000</p>
             </div>
 
             <div class="conjunto">
@@ -186,27 +197,27 @@
               <mat-panel-description *ngIf="false">
                 Bañada en salsa de queso azul.
               </mat-panel-description>
-              <p>$33.000</p>
+              <p>$42.000</p>
             </div>
 
             <div class="conjunto">
               <mat-panel-title>
-                <a mat-button color="primary"> Trucha crocante al pesto </a>
+                <a mat-button color="primary"> Trucha Crocante al Pesto </a>
               </mat-panel-title>
               <mat-panel-description *ngIf="false">
                 Deliciosa pechuga de pollo a la plancha
               </mat-panel-description>
-              <p>$33.000</p>
+              <p>$37.000</p>
             </div>
 
             <div class="conjunto">
               <mat-panel-title>
-                <a mat-button color="primary"> Cazuela de mariscos </a>
+                <a mat-button color="primary"> Cazuela de Mariscos </a>
               </mat-panel-title>
               <mat-panel-description *ngIf="false">
                 Deliciosa pechuga de pollo a la plancha
               </mat-panel-description>
-              <p>$39.000</p>
+              <p>$48.000</p>
             </div>
 
             <mat-action-row>
@@ -233,7 +244,7 @@
               <mat-panel-description *ngIf="false">
                 Con salsa pesto y champiñones de la región.
               </mat-panel-description>
-              <p>$32.000</p>
+              <p>$38.000</p>
             </div>
 
             <div class="conjunto">
@@ -243,7 +254,7 @@
               <mat-panel-description *ngIf="false">
                 Con salsa pesto y champiñones de la región.
               </mat-panel-description>
-              <p>$38.000</p>
+              <p>$42.000</p>
             </div>
 
             <mat-action-row>
@@ -270,7 +281,7 @@
               <mat-panel-description *ngIf="false">
                 Chatas a la plancha con delicioso chimichurri
               </mat-panel-description>
-              <p>$38.000</p>
+              <p>$33.000</p>
             </div>
             <div class="conjunto">
               <mat-panel-title>
@@ -279,7 +290,7 @@
               <mat-panel-description *ngIf="false">
                 Fino lomo de res a la plancha
               </mat-panel-description>
-              <p>$38.000</p>
+              <p>$39.000</p>
             </div>
 
             <mat-action-row>
@@ -307,16 +318,16 @@
               <mat-panel-description *ngIf="false">
                 Combinacion de dulce del dia con arequipe y queso al gratín.
               </mat-panel-description>
-              <p>$27.000</p>
+              <p>$31.000</p>
             </div>
             <div class="conjunto">
               <mat-panel-title>
                 <a mat-button color="primary"> Pasta al pesto </a>
               </mat-panel-title>
               <mat-panel-description *ngIf="false">
-                Con queso y arequipe
+                Platillo vegetariano
               </mat-panel-description>
-              <p>$25.000</p>
+              <p>$29.000</p>
             </div>
 
             <mat-action-row>
@@ -343,7 +354,7 @@
               <mat-panel-description *ngIf="false"
                 >Deliciosos jugos con fruta fresca del campo
               </mat-panel-description>
-              <p>$17.000</p>
+              <p>$19.000</p>
             </div>
 
             <mat-action-row>
@@ -370,7 +381,7 @@
               <mat-panel-description *ngIf="false">
                 Deliciosa limonada de coco el perfecto acompañante.
               </mat-panel-description>
-              <p>$7.000</p>
+              <p>$9.000</p>
             </div>
             <div class="conjunto">
               <mat-panel-title>
@@ -379,7 +390,7 @@
               <mat-panel-description *ngIf="false">
                 Limonada con el toque de la yerbabuena o menta.
               </mat-panel-description>
-              <p>$7.000</p>
+              <p>$9.000</p>
             </div>
             <div class="conjunto">
               <mat-panel-title>
@@ -388,7 +399,7 @@
               <mat-panel-description *ngIf="false">
                 Limonada con el toque de la yerbabuena o menta.
               </mat-panel-description>
-              <p>$7.000</p>
+              <p>$9.000</p>
             </div>
             <div class="conjunto">
               <mat-panel-title>
@@ -397,7 +408,7 @@
               <mat-panel-description *ngIf="false">
                 Deliciosa limonada natural.
               </mat-panel-description>
-              <p>$4.000</p>
+              <p>$4.500</p>
             </div>
             <div class="conjunto">
               <mat-panel-title>
@@ -413,7 +424,7 @@
               <mat-panel-description *ngIf="false"
                 >Bebida gaseosa</mat-panel-description
               >
-              <p>$4.000</p>
+              <p>$4.800</p>
             </div>
 
             <div class="conjunto">
@@ -423,7 +434,7 @@
               <mat-panel-description *ngIf="false"
                 >Deliciosos jugos con fruta fresca del campo
               </mat-panel-description>
-              <p>$7.000</p>
+              <p>$8.500</p>
             </div>
 
             <div class="conjunto">
@@ -433,7 +444,7 @@
               <mat-panel-description *ngIf="false"
                 >Deliciosos jugos con fruta fresca del campo
               </mat-panel-description>
-              <p>$5.000</p>
+              <p>$7.000</p>
             </div>
 
             <div class="conjunto">
@@ -443,7 +454,7 @@
               <mat-panel-description *ngIf="false"
                 >Deliciosos jugos con fruta fresca del campo
               </mat-panel-description>
-              <p>$7.000</p>
+              <p>$8.500</p>
             </div>
 
             <mat-action-row>
@@ -471,7 +482,7 @@
               <mat-panel-description *ngIf="false"
                 >Deliciosos jugos con fruta fresca del campo
               </mat-panel-description>
-              <p>$4.000</p>
+              <p>$6.000</p>
             </div>
 
             <div class="conjunto">
@@ -481,7 +492,7 @@
               <mat-panel-description *ngIf="false"
                 >Deliciosos jugos con fruta fresca del campo
               </mat-panel-description>
-              <p>$3.300</p>
+              <p>$4.500</p>
             </div>
 
             <div class="conjunto">
@@ -491,7 +502,7 @@
               <mat-panel-description *ngIf="false"
                 >Deliciosos jugos con fruta fresca del campo
               </mat-panel-description>
-              <p>$2.000</p>
+              <p>$3.000</p>
             </div>
 
             <div class="conjunto">
@@ -501,7 +512,7 @@
               <mat-panel-description *ngIf="false"
                 >Deliciosos jugos con fruta fresca del campo
               </mat-panel-description>
-              <p>$7.000</p>
+              <p>$9.000</p>
             </div>
 
             <div class="conjunto">
@@ -511,7 +522,7 @@
               <mat-panel-description *ngIf="false"
                 >Deliciosos jugos con fruta fresca del campo
               </mat-panel-description>
-              <p>$7.000</p>
+              <p>$9.000</p>
             </div>
 
             <div class="conjunto">
@@ -521,7 +532,7 @@
               <mat-panel-description *ngIf="false"
                 >Deliciosos jugos con fruta fresca del campo
               </mat-panel-description>
-              <p>$14.000</p>
+              <p>$15.000</p>
             </div>
 
             <mat-action-row>
@@ -549,7 +560,7 @@
               <mat-panel-description *ngIf="false"
                 >Deliciosos jugos con fruta fresca del campo
               </mat-panel-description>
-              <p>$15.000</p>
+              <p>$18.000</p>
             </div>
 
             <div class="conjunto">
@@ -559,7 +570,7 @@
               <mat-panel-description *ngIf="false"
                 >Deliciosos jugos con fruta fresca del campo
               </mat-panel-description>
-              <p>$15.000</p>
+              <p>$17.000</p>
             </div>
 
             <div class="conjunto">
@@ -569,7 +580,17 @@
               <mat-panel-description *ngIf="false"
                 >Deliciosos jugos con fruta fresca del campo
               </mat-panel-description>
-              <p>$13.000</p>
+              <p>$14.000</p>
+            </div>
+
+            <div class="conjunto">
+              <mat-panel-title>
+                <a mat-button color="primary"> Mousse de frutos rojos </a>
+              </mat-panel-title>
+              <mat-panel-description *ngIf="false"
+                >Mousse de frutos rojos
+              </mat-panel-description>
+              <p>$18.000</p>
             </div>
 
             <mat-action-row>
