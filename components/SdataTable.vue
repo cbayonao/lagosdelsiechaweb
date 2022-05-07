@@ -145,9 +145,18 @@
       </v-toolbar>
     </template>
     <template v-slot:[`item.actions`]="{ item }">
-      <v-icon color="#148F77" size="20" class="mr-2" @click="editItem(item)"> mdi-pencil </v-icon>
-      <v-icon color="#229954" size="20" class="mr-2" @click="deleteItem(item)"> mdi-delete </v-icon>
-      <v-icon color="#D4AC0D" size="20" class="mr-2" @click="showDetails(item)"> mdi-dots-horizontal </v-icon>
+      <v-btn x-small fab icon>
+        <v-icon color="#148F77" size="20" @click="editItem(item)"> mdi-pencil </v-icon>
+      </v-btn>
+      <!-- <v-btn x-small fab icon>
+        <v-icon color="#229954" size="20" @click="deleteItem(item)"> mdi-delete </v-icon>
+      </v-btn> -->
+      <v-btn x-small fab icon>
+        <v-icon color="#D4AC0D" size="20" @click="showDetails(item)"> mdi-dots-horizontal </v-icon>
+      </v-btn>
+      <v-btn :loading="sendConfirmation" x-small fab icon :disabled="item.is_confirmed">
+        <v-icon color="#BA4A00" size="20" @click="confirmReservation(item)"> mdi-email-fast </v-icon>
+      </v-btn>
     </template>
     <template v-slot:no-data>
       <v-btn color="primary" @click="initialize"> Reset </v-btn>
@@ -159,6 +168,7 @@
 <script>
 export default {
   data: () => ({
+    sendConfirmation: false,
     itemDetails: {},
     select: null,
     items: ["Restaurante", "Pesca"],
@@ -245,6 +255,7 @@ export default {
     },
     async getReservations() {
       const res = await this.$store.dispatch("getReservations");
+      console.log(res.data)
       this.reservations = res.data.map(
         ({
           id,
@@ -257,6 +268,7 @@ export default {
           isRestaurant,
           client_email,
           client_phone,
+          is_confirmed,
         }) => ({
           id,
           client_name,
@@ -269,6 +281,7 @@ export default {
           client_phone,
           isRestaurant,
           isFishing,
+          is_confirmed,
         })
       );
     },
@@ -287,6 +300,13 @@ export default {
       this.detailsIndex = this.reservations.indexOf(item);
       this.itemDetails = Object.assign({}, item);
       this.dialogShow = true;
+    },
+
+    async confirmReservation(item) {
+      this.sendConfirmation = true;
+      const res = await this.$store.dispatch("confirmReservation", item);
+      this.getReservations();
+      this.sendConfirmation = false;
     },
 
     deleteItem(item) {

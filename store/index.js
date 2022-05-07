@@ -30,5 +30,9 @@ export const actions = {
     async getSumResByDate(context, date) {
         const response = await this.$axios.get(`/get_sum_res_by_date/${date}`);
         return response;
+    },
+    async confirmReservation(context, data) {
+        const response = await this.$axios.post(`/confirm_reservation`, data);
+        return response;
     }
 }
