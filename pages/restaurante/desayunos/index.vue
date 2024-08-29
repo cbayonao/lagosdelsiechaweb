@@ -21,11 +21,11 @@ export default {
     return {
       desayunos: [
         {
-          nombre: "Desayuno Continental",
-          precio: "$ 17.000",
+          nombre: "Desayuno Alegria",
+          precio: "$ 34.000",
           categoria: "Desayunos",
-          detalle: "Chocolate o Café con leche, huevos al gusto y pan o arepa.",
-          imagen: "https://source.unsplash.com/5sD2TgDZOxA/400x400",
+          detalle: "Jugo de frutas, waffles condulce de fresas y moras, huevos al gusto, milo frio o caliente.",
+          imagen: "",
         },
       ],
     };

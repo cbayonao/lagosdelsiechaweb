@@ -28,7 +28,7 @@ export default {
         },
         {
           nombre: "Limonada natural",
-          precio: "$ 9.000",
+          precio: "$ 4.500",
           categoria: "Bebidas frias",
           detalle: "Ideal para calmar tu sed.",
           imagen: "",

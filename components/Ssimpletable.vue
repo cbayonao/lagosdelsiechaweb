@@ -43,7 +43,7 @@
           },
           {
             name: 'Libra de trucha',
-            precio: "$ 12.000",
+            precio: "$ 15.000",
           },
         ],
       }

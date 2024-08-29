@@ -2,10 +2,9 @@
   <v-container fluid>
     <v-row dense justify="center" align="center">
       <v-col v-for="card in cards" :key="card.title" cols="12" :md="card.flex">
-        <v-card flat v-if="card.title != 'Mapa' && card.title != 'Contáctanos'">
-          <v-img
-            gradient="to bottom, rgba(218, 240, 238,.1), rgba(9, 82, 86, .5)"
-          >
+        <v-card flat
+          v-if="card.title != 'Mapa' && card.title != 'Contáctanos' && card.title != 'Visita 360 a nuestro sitio'">
+          <v-img gradient="to bottom, rgba(218, 240, 238,.1), rgba(9, 82, 86, .5)">
             <v-card-title>
               <div class="text-h5">
                 {{ card.title }}
@@ -20,26 +19,29 @@
           </v-img>
           <v-card-actions v-if="card.title == 'Restaurante'">
             <v-spacer />
-            <span
-              >Mira nuestra carta, y otros detalles para tus celebraciones
-              especiales.</span
-            >
-            <v-btn to="/restaurante" class="ma-2" outlined fab color="primary">
-              <v-icon>mdi-silverware-fork-knife</v-icon>
+            <span>Mira nuestra carta, y otros detalles para tus celebraciones
+              especiales.</span>
+            <v-btn @click="goTo('restaurante')" class="ma-2" outlined rounded color="primary">
+              <v-icon left>mdi-silverware-fork-knife</v-icon>
+              Restaurante
             </v-btn>
           </v-card-actions>
           <v-card-actions v-if="card.title == 'Pesca'">
             <span>Todos los detalles de la actividad de pesca, para todos los niveles.</span>
             <v-spacer />
-            <v-btn to="/pesca" class="ma-2" outlined fab color="primary">
-              <v-icon>mdi-hook</v-icon>
+            <v-btn @click="goTo('pesca')" class="ma-2" outlined rounded color="primary">
+              <v-icon left>mdi-hook</v-icon>
+              <span>
+                Pesca
+              </span>
             </v-btn>
           </v-card-actions>
           <v-card-actions v-if="card.title == 'Eventos'">
             <span>Celebra tus eventos especiales, empresariales y familiares repirando aire puro.</span>
             <v-spacer />
-            <v-btn to="/eventos" class="ma-2" outlined fab color="primary">
-              <v-icon>mdi-party-popper</v-icon>
+            <v-btn @click="goTo('eventos')" class="ma-2" outlined rounded color="primary">
+              <v-icon left>mdi-party-popper</v-icon>
+              Cotizar Evento
             </v-btn>
           </v-card-actions>
           <v-card-actions v-if="card.title == 'Map'">
@@ -61,49 +63,30 @@
             </div>
           </v-card-subtitle>
           <!-- <v-card-text> -->
+          <!-- <iframe src="https://embed.waze.com/es/iframe?zoom=16&lat=4.799162&lon=-73.891876&pin=1&desc=Lagos" width="100%"
+            height="495" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6336.468858551867!2d-73.89251201434668!3d4.800320637932962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd4d0d6422038eece!2sLagos%20del%20Siecha%20restaurante%20y%20pesca%20deportiva!5e1!3m2!1ses!2sco!4v1649786492349!5m2!1ses!2sco"
-            width="100%"
-            height="495"
-            style="border: 0"
-            allowfullscreen="true"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+            width="100%" height="495" style="border: 0" allowfullscreen="true" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
           <!-- </v-card-text> -->
           <v-card-actions>
-            <span
-              >Has click en el botón para ir a Google maps o a Waze con la ruta.</span
-            >
+            <span>Has click en el botón para ir a Google maps o a Waze con la ruta.</span>
             <v-spacer />
-            <v-btn
-              link
-              href="https://maps.google.com/maps/dir//Lagos+del+Siecha+restaurante+y+pesca+deportiva+Sector+Paso+Hondo+Vda.+La+Trinidad,+Guasca,+Cundinamarca/@4.7991617,-73.8918757,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x8e3f8b9e60c90559:0xd4d0d6422038eece"
-              target="_blank"
-              class="ma-2"
-              outlined
-              fab
-              color="primary"
-            >
+            <v-btn link
+              href="https://maps.app.goo.gl/33gGgyAxZVgLP5saA"
+              target="_blank" class="ma-2" outlined fab color="primary">
               <v-icon>mdi-google-maps</v-icon>
             </v-btn>
-            <v-btn
-              link
+            <v-btn link
               href="https://ul.waze.com/ul?preview_venue_id=187498544.1875050976.1123253&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
-              target="_blank"
-              class="ma-2"
-              outlined
-              fab
-              color="#93c4d3"
-            >
+              target="_blank" class="ma-2" outlined fab color="#93c4d3">
               <v-icon>mdi-waze</v-icon>
             </v-btn>
           </v-card-actions>
         </v-card>
         <v-card flat v-if="card.title == 'Contáctanos'">
-          <v-img
-            gradient="to bottom, rgba(218, 240, 238,.1), rgba(9, 82, 86, .5)"
-          >
+          <v-img gradient="to bottom, rgba(218, 240, 238,.1), rgba(9, 82, 86, .5)">
             <v-card-title>
               <div class="text-h5">
                 {{ card.title }}
@@ -115,60 +98,44 @@
               </div>
             </v-card-subtitle>
           </v-img>
-          <v-card-actions
-            class="d-flex justify-center"
-            v-if="card.title == 'Contáctanos'"
-          >
-            <v-btn
-              @click="dialogPhone = true"
-              class="ma-2"
-              outlined
-              fab
-              color="#F4B400"
-            >
+          <v-card-actions class="d-flex justify-center" v-if="card.title == 'Contáctanos'">
+            <v-btn @click="dialogPhone = true" class="ma-2" outlined fab color="#F4B400">
               <v-icon>mdi-phone</v-icon>
             </v-btn>
-            <v-btn
-              @click="dialogEmail = true"
-              class="ma-2"
-              outlined
-              fab
-              color="#4285F4"
-            >
+            <v-btn @click="dialogEmail = true" class="ma-2" outlined fab color="#4285F4">
               <v-icon>mdi-at</v-icon>
             </v-btn>
-            <v-btn
-              @click="openWhatsApp"
-              class="ma-2"
-              outlined
-              fab
-              color="#0F9D58"
-            >
+            <v-btn @click="openWhatsApp" class="ma-2" outlined fab color="#0F9D58">
               <v-icon>mdi-whatsapp</v-icon>
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+        <v-card flat v-if="card.title == 'Visita 360 a nuestro sitio'">
+          <v-img gradient="to bottom, rgba(218, 240, 238,.1), rgba(9, 82, 86, .5)">
+            <v-card-title>
+              <div class="text-h5">
+                {{ card.title }}
+              </div>
+            </v-card-title>
+            <v-card-subtitle>
+              <div class="text-subtitle-1">
+                {{ card.subtitle }}
+              </div>
+            </v-card-subtitle>
+          </v-img>
+          <v-card-actions class="d-flex justify-center">
+            <v-btn @click="goTo360()" class="ma-2" outlined fab color="#F4B400">
+              <v-icon>mdi-panorama-variant</v-icon>
             </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
     </v-row>
-    <smodal
-      :dialog="dialogPhone"
-      :handleDialog="handleDialogPhone"
-      :title="'Número de contacto:'"
-      :content="'+57 310 772 5161'"
-      :btnTxt="'llamar'"
-      :icon="'mdi-phone'"
-      :action="callSiecha"
-    />
-    <smodal
-      :dialog="dialogEmail"
-      :handleDialog="handleDialogEmail"
-      :title="'Nuestro email:'"
-      :content="'lagosdelsiecha@gmail.com'"
-      :btnTxt="'Enviar correo'"
-      :icon="'mdi-at'"
-      :action="emailSiecha"
-    />
-    <s-dialog-info />
+    <smodal :dialog="dialogPhone" :handleDialog="handleDialogPhone" :title="'Número de contacto:'"
+      :content="'+57 310 772 5161'" :btnTxt="'llamar'" :icon="'mdi-phone'" :action="callSiecha" />
+    <smodal :dialog="dialogEmail" :handleDialog="handleDialogEmail" :title="'Nuestro email:'"
+      :content="'lagosdelsiecha@gmail.com'" :btnTxt="'Enviar correo'" :icon="'mdi-at'" :action="emailSiecha" />
+    <!-- <s-dialog-info /> -->
   </v-container>
 </template>
 
@@ -233,6 +200,13 @@ export default {
         sm: 12,
       },
       {
+        title: "Visita 360 a nuestro sitio",
+        subtitle: "Recorre nuestro sitio y enamorate antes de venir!",
+        imgs: [],
+        flex: "",
+        sm: ""
+      },
+      {
         title: "Mapa",
         subtitle: "Mira como puedes llegar desde donde te encuentres.",
         imgs: [],
@@ -272,6 +246,12 @@ export default {
         "https://api.whatsapp.com/send?phone=573107725161&text=Hola,%20me%20gustaría%20más%20información%20sobre%20los%20servicios%20de%20Lagos%20del%20Siecha."
       );
     },
+    goTo360() {
+      this.$router.push({ name: '360' });
+    },
+    goTo(path) {
+      this.$router.push({ name: path });
+    }
   },
 };
 </script>

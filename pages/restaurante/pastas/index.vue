@@ -25,14 +25,14 @@ export default {
           precio: "$ 31.000",
           categoria: "Pastas",
           detalle: "Spaguetti con tocineta y salsa carbonara.",
-          imagen: "",
+          imagen: "Spaguetti con tocineta y salsa carbonara.",
         },
         {
           nombre: "Pasta al pesto",
           precio: "$ 29.000",
           categoria: "Pasta y vegetarianos",
-          detalle: 65,
-          imagen: "Con pesto y champiñones frescos de la región.",
+          detalle: "Con pesto y champiñones frescos de la región",
+          imagen: "",
         },
       ],
     };

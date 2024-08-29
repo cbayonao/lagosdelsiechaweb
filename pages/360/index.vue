@@ -4,6 +4,7 @@
     style="background-color: #fafafa"
     width="100%"
     height="700px"
+    max-height="700px"
   >
     <iframe
       src="https://360.panorapp.com/tour360/lagosdelsiecha/"

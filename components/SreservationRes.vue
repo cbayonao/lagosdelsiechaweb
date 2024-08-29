@@ -91,6 +91,12 @@
     ></v-text-field>
 
     <v-switch
+      v-model="isPet"
+      prepend-icon="mdi-paw"
+      :label="`Traes tu mascota?`"
+    ></v-switch>
+
+    <v-switch
       v-model="isCelebration"
       prepend-icon="mdi-party-popper"
       :label="`Es una celebración especial? (Cumpleaños, Aniversario, etc.)`"
@@ -143,7 +149,7 @@ export default {
     resTimesByDate: [],
     snackbar: false,
     snackBarText: "",
-    valid: true,
+    valid: false,
     name: "",
     nameRules: [
       (v) => !!v || "Nombre es requerido",
@@ -185,6 +191,7 @@ export default {
     isFishing: false,
     celebrationDetails: "",
     isSend: false,
+    isPet: false,
   }),
 
   methods: {
@@ -285,7 +292,7 @@ export default {
       this.$refs.form.validate();
       const { name, email, phoneNumber, numberPeople, fromDateDisp, time } =
         this;
-      const { isCelebration, celebrationDetails, isRestaurant, isFishing } =
+      const { isPet, isCelebration, celebrationDetails, isRestaurant, isFishing } =
         this;
       const data = {
         name,
@@ -294,6 +301,7 @@ export default {
         numberPeople,
         fromDateDisp,
         time,
+        isPet,
         isCelebration,
         isRestaurant,
         isFishing,
@@ -315,6 +323,7 @@ export default {
   },
 
   mounted() {
+    this.$fb.enable();
     this.minDate = this.getTodayDate();
     this.maxDate = this.getOneYearMore();
     this.getSumReservations();

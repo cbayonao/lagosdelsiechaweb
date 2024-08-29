@@ -91,6 +91,24 @@
       </v-card-text>
     </v-card>
     <v-card class="mb-2">
+      <v-card-title>
+        <div class="no-break">
+          Vista 360 a nuestro sitio
+        </div>
+      </v-card-title>
+      <v-card-subtitle>
+        <div class="no-break">
+          Sumergete en nuestra experiencia 360
+        </div>
+      </v-card-subtitle>
+      <v-card-actions>
+        <v-spacer></v-spacer>
+        <v-btn @click="goTo360()" color="primary" text>
+          Ir a 360
+        </v-btn>
+      </v-card-actions>
+    </v-card>
+    <v-card class="mb-2">
       <v-card-title> Reservas para el restaurante: </v-card-title>
       <v-card-text>
         <sreservation-res />
@@ -105,6 +123,11 @@ import Sdataiterator from "../../components/Sdataiterator.vue";
 import SreservationRes from "../../components/SreservationRes.vue";
 export default {
   components: { Sdataiterator, SreservationRes, ImageCard },
+  methods: {
+    goTo360() {
+      this.$router.push({ name: '360' });
+    }
+  }
 };
 </script>
 

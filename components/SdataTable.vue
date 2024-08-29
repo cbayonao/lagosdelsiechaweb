@@ -188,9 +188,10 @@ export default {
         sortable: false,
         value: "client_name",
       },
-      { text: "Fecha de la reserva", value: "date" },
-      { text: "Hora de la reserva", value: "time" },
-      { text: "Número de personas", value: "number_people" },
+      { text: "Fecha reserva", value: "date" },
+      { text: "Hora reserva", value: "time" },
+      { text: "Núm. pax", value: "number_people" },
+      { text: "Traen mascotas", value: "isPet" },
       { text: "Reserva para", value: "reserva_para" },
       //   { text: "Detalles", value: "details", sortable: false },
       { text: "Acciones", value: "actions", sortable: false },
@@ -208,6 +209,7 @@ export default {
       reserva_para: "",
       isRestaurant: false,
       isFishing: false,
+      isPet: false,
     },
     defaultItem: {
       id: null,
@@ -221,6 +223,7 @@ export default {
       reserva_para: "",
       isRestaurant: false,
       isFishing: false,
+      isPet: false,
     },
   }),
 
@@ -269,6 +272,7 @@ export default {
           client_email,
           client_phone,
           is_confirmed,
+          isPet,
         }) => ({
           id,
           client_name,
@@ -282,6 +286,7 @@ export default {
           isRestaurant,
           isFishing,
           is_confirmed,
+          isPet: isPet ? "Si" : "No",
         })
       );
     },

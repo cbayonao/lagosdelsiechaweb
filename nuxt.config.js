@@ -8,6 +8,23 @@ export default {
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
+  //   <!-- Meta Pixel Code -->
+  // <script>
+  //   !function(f,b,e,v,n,t,s)
+  //   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  //   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  //   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  //   n.queue=[];t=b.createElement(e);t.async=!0;
+  //   t.src=v;s=b.getElementsByTagName(e)[0];
+  //   s.parentNode.insertBefore(t,s)}(window, document,'script',
+  //   'https://connect.facebook.net/en_US/fbevents.js');
+  //   fbq('init', '348775634048215');
+  //   fbq('track', 'PageView');
+  // </script>
+  // <noscript><img height="1" width="1" style="display:none"
+  //   src="https://www.facebook.com/tr?id=348775634048215&ev=PageView&noscript=1"
+  // /></noscript>
+  // <!-- End Meta Pixel Code -->
   head: {
     titleTemplate: '%s - Home',
     title: 'Lagos del Siecha App',
@@ -19,7 +36,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -45,7 +62,43 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://www.npmjs.com/package/nuxt-facebook-pixel-module
+    'nuxt-facebook-pixel-module',
   ],
+  // <!-- Meta Pixel Code -->
+  // <script>
+  //   !function(f,b,e,v,n,t,s)
+  //   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  //   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  //   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  //   n.queue=[];t=b.createElement(e);t.async=!0;
+  //   t.src=v;s=b.getElementsByTagName(e)[0];
+  //   s.parentNode.insertBefore(t,s)}(window, document,'script',
+  //   'https://connect.facebook.net/en_US/fbevents.js');
+  //   fbq('init', '1079349492658373');
+  //   fbq('track', 'PageView');
+  // </script>
+  // <noscript><img height="1" width="1" style="display:none"
+  //   src="https://www.facebook.com/tr?id=1079349492658373&ev=PageView&noscript=1"
+  // /></noscript>
+  // <!-- End Meta Pixel Code -->
+  facebook: {
+    track: 'PageView',
+    pixelId: '1079349492658373',
+    autoPageView: true,
+    disabled: false,
+    pixels: [
+      {
+        pixelId: '1079349492658373',
+        routes: [
+          '/',
+          '/restaurante/*',
+          '/pesca',
+          '/eventos',
+        ]
+      }
+    ],
+  },
 
   pwa: {
     manifest: {
@@ -64,7 +117,7 @@ export default {
       targetDir: 'img/icons',
     },
     meta: {
-      ogHost: 'https://lagosdelsiecha.com',
+      ogiconHost: 'https://lagosdelsiecha.com',
       ogImage: 'https://lagosdelsiecha.com/static/logo.png',
       ogTitle: 'Lagos del Siecha',
       ogDescription: 'Pesca de Trucha, Restaurante y Centro de Convenciones',
@@ -91,7 +144,7 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      lang: 'es'
     }
   },
 

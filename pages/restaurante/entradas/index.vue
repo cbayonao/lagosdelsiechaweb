@@ -23,14 +23,14 @@ export default {
       entradas: [
         {
           nombre: "Tomates Mozzarella",
-          precio: "$ 21.000",
+          precio: "$ 24.000",
           categoria: "Entradas",
           detalle: "Frescos tomates gratinados con queso mozarella, a las finas hierbas.",
           imagen: "https://source.unsplash.com/hnyZg63sRCY/400x400",
         },
         {
           nombre: "Champiñones al ajillo",
-          precio: "$ 21.000",
+          precio: "$ 25.000",
           categoria: "Entradas",
           detalle: "Champiñones frescos gratinados con el mágico toque del ajo.",
           imagen: "",

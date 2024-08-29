@@ -21,14 +21,14 @@ export default {
       menuinfantil: [
         {
           nombre: "Nuggets de pollo",
-          precio: "$ 19.000",
+          precio: "$ 22.000",
           categoria: "Menú infantil",
           detalle: "Con papá a la francesa, salsas, jugo y sorpresita.",
           imagen: "",
         },
         {
           nombre: "Hamburguesa",
-          precio: "$ 19.000",
+          precio: "$ 22.000",
           categoria: "Menú infantil",
           detalle: "Con papá a la francesa.",
           imagen: "",

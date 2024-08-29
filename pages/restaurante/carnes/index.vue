@@ -24,16 +24,16 @@ export default {
       carnes: [
         {
           nombre: "Churrasco",
-          precio: "$ 38.000",
+          precio: "$ 44.000",
           categoria: "Carnes",
           detalle: "Chatas de res con chimichurri.",
           imagen: "",
         },
         {
-          nombre: "Baby beef",
-          precio: "$ 42.000",
+          nombre: "Costillitas BBQ",
+          precio: "$ 47.000",
           categoria: "Carnes",
-          detalle: "Fino lomo de res con chimichurri.",
+          detalle: "Deliciosas costillas con salsa BBQ de la casa.",
           imagen: "",
         },
       ]

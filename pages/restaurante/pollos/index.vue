@@ -23,7 +23,7 @@ export default {
       pollos: [
         {
           nombre: "Pechuga a la plancha",
-          precio: "$ 33.000",
+          precio: "$ 37.000",
           categoria: "Pollos",
           detalle: "Deliciosa pechuga a la plancha, con el toque de la casa.",
           imagen: "",

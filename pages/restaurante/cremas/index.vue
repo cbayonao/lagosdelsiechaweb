@@ -21,18 +21,18 @@ export default {
       cremas: [
         {
           nombre: "Crema de Champiñones",
-          precio: "$ 21.000",
+          precio: "$ 24.000",
           categoria: "Cremas",
           detalle: "Suave a su paladar, con frescos champiñones del campo.",
           imagen: "",
         },
         {
           nombre: "Crema Siecha",
-          precio: "$ 20.000",
+          precio: "$ 27.000",
           categoria: "Cremas",
-          detalle: 49,
+          detalle: "Con el toque secreto que le da nuestra fresca y deliciosa trucha.",
           imagen:
-            "Con el toque secreto que le da nuestra fresca y deliciosa trucha.",
+            "",
         },
       ],
     };

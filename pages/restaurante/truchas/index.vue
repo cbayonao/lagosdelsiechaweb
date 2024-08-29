@@ -26,14 +26,14 @@ export default {
       truchas: [
         {
           nombre: "Cazuela de mariscos",
-          precio: "$ 48.000",
+          precio: "$ 55.000",
           categoria: "Truchas y mariscos",
           detalle: "Con el toque del Siecha que te encantará.",
           imagen: "https://source.unsplash.com/e6Djr0-Is8A/400x400",
         },
         {
           nombre: "Trucha a la marinera",
-          precio: "$ 56.000",
+          precio: "$ 64.000",
           categoria: "Truchas y mariscos",
           detalle: "Bañada en salsa de frescos mariscos.",
           imagen:
@@ -41,7 +41,7 @@ export default {
         },
         {
           nombre: "Trucha al ajillo",
-          precio: "$ 33.000",
+          precio: "$ 38.000",
           categoria: "Truchas y mariscos",
           detalle: "Con el poder y saludable sabor del ajo.",
           imagen:
@@ -49,7 +49,7 @@ export default {
         },
         {
           nombre: "Trucha en salsa de champiñones",
-          precio: "$ 37.000",
+          precio: "$ 42.000",
           categoria: "Truchas y mariscos",
           detalle: "Con un delicioso aroma que es secreto del chef.",
           imagen:
@@ -57,14 +57,14 @@ export default {
         },
         {
           nombre: "Trucha al curry con camarones",
-          precio: "$ 52.000",
+          precio: "$ 60.000",
           categoria: "Truchas y mariscos",
           detalle: "La nueva delicia de 'El Siecha'.",
           imagen: "",
         },
         {
           nombre: "Trucha a la griega",
-          precio: "$ 42.000",
+          precio: "$ 48.000",
           categoria: "Truchas y mariscos",
           detalle:
             "Gratinada en dos quesos, con aceitunas verdes, tomate y cebolla.",
@@ -72,7 +72,7 @@ export default {
         },
         {
           nombre: "Trucha florentina",
-          precio: "$ 38.000",
+          precio: "$ 44.000",
           categoria: "Truchas y mariscos",
           detalle:
             "A la plancha, terminada al horno, con puré de espinacas sobre salsa de queso.",
@@ -80,14 +80,14 @@ export default {
         },
         {
           nombre: "Trucha Roquefort",
-          precio: "$ 42.000",
+          precio: "$ 44.000",
           categoria: "Truchas y mariscos",
           detalle: "Bañada en salsa de queso azul.",
           imagen: "",
         },
         {
           nombre: "Trucha crocante al pesto",
-          precio: "$ 37.000",
+          precio: "$ 42.000",
           categoria: "Truchas y mariscos",
           detalle:
             "Filete apanado con mezcla de almendra, ajo y albahaca dorado.",
